@@ -2,6 +2,7 @@ import "./App.css";
 import useSound from "use-sound";
 // import { db } from "./firebase_setup/firebase";
 import { useState, useEffect, useCallback } from "react";
+new AudioContext()
 
 function App() {
   const soundUrl =
@@ -13,7 +14,7 @@ function App() {
     playbackRate,
     volume: 0.5,
   });
-
+  
   const table = {
     q: 0.7,
     w: 0.8,
@@ -26,22 +27,28 @@ function App() {
     o: 1.5,
     p: 1.6,
   };
-
+  
   const handleClick = (key) => {
     setPlaybackRate(table[key]);
     play();
   };
-
+  
+  // const [playSound1]= useSound(soundUrl,setPlaybackRate(table[event.key])) 
   const onKeyPress = useCallback((event) => {
     console.log(`Key pressed: ${event.key}`);
-    if (event.key === "q") {
-      console.log(event.key);
+    if (event.key === "q") { 
+      handleClick(event.key); 
     } else if (event.key === "w") {
-      console.log(event.key);
+      handleClick(event.key);  
     } else if (event.key === "e") {
-      console.log(event.key);
+      handleClick(event.key);  
     } else if (event.key === "r") {
-      console.log(event.key);
+      console.log(playbackRate, "pbrate");
+
+      handleClick(event.key);  
+      console.log(playbackRate, "pbrate");
+
+      play();
     }
     // if (event.key === "w") console.log(event.key);
     // if (event.key === "e") console.log(event.key);
@@ -54,11 +61,11 @@ function App() {
 
     // remove the event listener
     return () => {
-      window.removeEventListener("keydown", onKeyPress);
+     window.removeEventListener("keydown", onKeyPress);
     };
   }, [onKeyPress]);
 
-  console.log(playbackRate, "pb0");
+  console.log(playbackRate, "pbrate");
 
   return (
     <div className="App">
