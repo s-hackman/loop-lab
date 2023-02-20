@@ -5,16 +5,14 @@ import { useState, useEffect, useCallback } from "react";
 new AudioContext();
 
 function App() {
+  // Qwerty row
   const soundUrl =
     "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/stinger-sound-cmaj7-chord-stab-12534.mp3?alt=media&token=31278a3f-df90-4e2d-9020-b5be9e570f1b";
-
   const [playbackRate, setPlaybackRate] = useState(1);
-
   const [play] = useSound(soundUrl, {
     playbackRate,
     volume: 0.5,
   });
-
   const table = {
     q: 0.7,
     w: 0.8,
@@ -27,12 +25,37 @@ function App() {
     o: 1.5,
     p: 1.6,
   };
-
   const handleClick = (key) => {
     setPlaybackRate(table[key]);
     play();
   };
 
+  // Base
+  const baseUrl =
+    "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/Shaker%20(C).wav?alt=media&token=e678ea30-c674-47ad-b234-c93110a2ada8";
+  const [playbackRateBase, setPlaybackRateBase] = useState(1);
+  const [playBase] = useSound(baseUrl, {
+    playbackRate: playbackRateBase,
+    volume: 0.2,
+  });
+  const tableBase = {
+    1: 0.7,
+    2: 0.8,
+    3: 0.9,
+    4: 1,
+    5: 1.1,
+    6: 1.2,
+    7: 1.3,
+    8: 1.4,
+    9: 1.5,
+    0: 1.6,
+  };
+  const handleClickBase = (key) => {
+    setPlaybackRateBase(tableBase[key]);
+    playBase();
+  };
+
+  //Key Press
   const onKeyPress = useCallback(
     (event) => {
       console.log(`Key pressed: ${event.key}`);
@@ -56,11 +79,30 @@ function App() {
         handleClick(event.key);
       } else if (event.key === "p") {
         handleClick(event.key);
+      } else if (event.key === "1") {
+        handleClickBase(event.key);
+      } else if (event.key === "2") {
+        handleClickBase(event.key);
+      } else if (event.key === "3") {
+        handleClickBase(event.key);
+      } else if (event.key === "4") {
+        handleClickBase(event.key);
+      } else if (event.key === "5") {
+        handleClickBase(event.key);
+      } else if (event.key === "6") {
+        handleClickBase(event.key);
+      } else if (event.key === "7") {
+        handleClickBase(event.key);
+      } else if (event.key === "8") {
+        handleClickBase(event.key);
+      } else if (event.key === "9") {
+        handleClickBase(event.key);
+      } else if (event.key === "0") {
+        handleClickBase(event.key);
       }
     },
-    [playbackRate]
+    [playbackRate, playbackRateBase]
   );
-
   useEffect(() => {
     // attach the event listener
     window.addEventListener("keydown", onKeyPress);
@@ -70,22 +112,72 @@ function App() {
     };
   }, [onKeyPress]);
 
-  console.log(playbackRate, "pbrate");
+  console.log(playbackRateBase, "pbrate");
 
   return (
     <div className="App">
       <section className="keyboard">
         <section className="drums">
-          <div className="keys">1</div>
-          <div className="keys">2</div>
-          <div className="keys">3</div>
-          <div className="keys">4</div>
-          <div className="keys">5</div>
-          <div className="keys">6</div>
-          <div className="keys">7</div>
-          <div className="keys">8</div>
-          <div className="keys">9</div>
-          <div className="keys">0</div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            1
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            2
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            3
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            4
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            5
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            6
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            7
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            8
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            9
+          </div>
+          <div
+            className="keys"
+            onClick={(e) => handleClickBase(e.target.innerText)}
+          >
+            0
+          </div>
         </section>
         <section className="qrow">
           <div
