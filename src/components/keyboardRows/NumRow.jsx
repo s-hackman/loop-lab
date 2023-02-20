@@ -31,7 +31,6 @@ const NumRow = () => {
   //Key Press
   const onKeyPress = useCallback(
     (event) => {
-      console.log(`Key pressed: ${event.key}`);
       if (event.key === "1") {
         handleClickBase(event.key);
       } else if (event.key === "2") {

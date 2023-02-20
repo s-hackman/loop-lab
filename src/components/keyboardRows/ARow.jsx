@@ -2,25 +2,24 @@ import React from "react";
 import useSound from "use-sound";
 import { useState, useEffect, useCallback } from "react";
 
-const QRow = () => {
+const ARow = () => {
   const soundUrl =
-    "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/stinger-sound-cmaj7-chord-stab-12534.mp3?alt=media&token=31278a3f-df90-4e2d-9020-b5be9e570f1b";
+    "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Fpiano-c_C_major.wav?alt=media&token=a0f8481e-c58f-4322-a822-705be76d285f";
   const [playbackRate, setPlaybackRate] = useState(1);
   const [play] = useSound(soundUrl, {
     playbackRate,
-    volume: 0.5,
+    volume: 0.3,
   });
   const table = {
-    q: 0.7,
-    w: 0.8,
-    e: 0.9,
-    r: 1,
-    t: 1.1,
-    y: 1.2,
-    u: 1.3,
-    i: 1.4,
-    o: 1.5,
-    p: 1.6,
+    a: 0.4,
+    s: 0.6,
+    d: 0.8,
+    f: 1,
+    g: 1.2,
+    h: 1.4,
+    j: 1.6,
+    k: 1.8,
+    l: 2,
   };
   const handleClick = (key) => {
     setPlaybackRate(table[key]);
@@ -29,26 +28,23 @@ const QRow = () => {
 
   const onKeyPress = useCallback(
     (event) => {
-      console.log(`Key pressed: ${event.key}`);
-      if (event.key === "q") {
+      if (event.key === "a") {
         handleClick(event.key);
-      } else if (event.key === "w") {
+      } else if (event.key === "s") {
         handleClick(event.key);
-      } else if (event.key === "e") {
+      } else if (event.key === "d") {
         handleClick(event.key);
-      } else if (event.key === "r") {
+      } else if (event.key === "f") {
         handleClick(event.key);
-      } else if (event.key === "t") {
+      } else if (event.key === "g") {
         handleClick(event.key);
-      } else if (event.key === "y") {
+      } else if (event.key === "h") {
         handleClick(event.key);
-      } else if (event.key === "u") {
+      } else if (event.key === "j") {
         handleClick(event.key);
-      } else if (event.key === "i") {
+      } else if (event.key === "k") {
         handleClick(event.key);
-      } else if (event.key === "o") {
-        handleClick(event.key);
-      } else if (event.key === "p") {
+      } else if (event.key === "l") {
         handleClick(event.key);
       }
     },
@@ -64,39 +60,36 @@ const QRow = () => {
   }, [onKeyPress]);
 
   return (
-    <section className="qrow">
+    <section className="arow">
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        q
+        a
       </div>
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        w
+        s
       </div>
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        e
+        d
       </div>
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        r
+        f
       </div>
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        t
+        g
       </div>
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        y
+        h
       </div>
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        u
+        j
       </div>
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        i
+        k
       </div>
       <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        o
-      </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        p
+        l
       </div>
     </section>
   );
 };
 
-export default QRow;
+export default ARow;
