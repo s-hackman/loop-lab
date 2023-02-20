@@ -1,11 +1,19 @@
 import "./App.css";
 import Keyboard from "./components/Keyboard";
+import Login from "./components/Login";
+import Nav from "./components/Nav";
+import { Routes, Route } from "react-router-dom";
+
 // import { db } from "./firebase_setup/firebase";
 
 function App() {
   return (
     <div className="App">
-      <Keyboard />
+      <Nav/>
+      <Routes>
+      <Route path="/" element={<Keyboard/>}></Route>
+      <Route path="/login" element={<Login/>}></Route>
+      </Routes>
     </div>
   );
 }
