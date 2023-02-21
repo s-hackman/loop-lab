@@ -20,7 +20,7 @@ export const PianoComponent = () => {
   window.addEventListener("keydown", playNote);
 
   return (
-    <div className="pianoPage">
+    <div className="pianoContainer">
       <h1>Piano</h1>
       <div className="piano">
         <div className="white-key" onClick={playC4}>

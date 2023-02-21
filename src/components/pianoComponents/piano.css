@@ -1,5 +1,6 @@
-.pianoPage {
-    align-items: center;
+.pianoContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -9,6 +10,7 @@ h1 {
 .piano {
     display: flex;
     justify-content: center;
+    margin: 0 50px;
 }
 
 .white-key {
@@ -18,6 +20,14 @@ h1 {
     background-color: white;
     color: red;
     text-align: center;
+}
+
+.white-key:active {
+    background-color: gray;
+}
+
+.black-key:active {
+    background-color: gray;
 }
 
 .black-key {
@@ -30,3 +40,14 @@ h1 {
     color: red;
     text-align: center;
 }
+
+@media only screen and (max-width: 850px) {
+    .black-key {
+        width: 40px;
+        height: 220px;
+    }
+    .white-key {
+        width: 80px;
+        height: 350px;
+    }
+  }
