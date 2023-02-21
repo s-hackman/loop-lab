@@ -18,7 +18,6 @@ import {
 import "../../styles/piano.css";
 
 export const PianoComponent = () => {
-
   useEffect(() => {
     // attach the event listener
     window.addEventListener("keydown", playNote);
@@ -27,7 +26,6 @@ export const PianoComponent = () => {
       window.removeEventListener("keydown", playNote);
     };
   }, [playNote]);
-
 
   return (
     <div className="pianoContainer">

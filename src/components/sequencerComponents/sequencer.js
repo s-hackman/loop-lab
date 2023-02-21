@@ -55,7 +55,6 @@ const Sequencer = ({ player }) => {
   const [bpm, setBpm] = useState(120);
 
   const inputChange = (e) => {
-    console.log(e, "E");
     setBpm(e.target.value);
   };
   return (
