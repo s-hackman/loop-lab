@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -6,7 +5,7 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import { auth } from "../firebase_setup/firebase";
+import { auth } from "../../firebase_setup/firebase";
 
 function Login() {
   const [registerEmail, setRegisterEmail] = useState("");
