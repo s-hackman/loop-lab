@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Nav from "./components/Nav";
 import { Routes, Route } from "react-router-dom";
 import MainSequencer from "./components/MainSequencer";
+import { PianoComponent } from "./components/PianoComponent";
 
 // import { db } from "./firebase_setup/firebase";
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Keyboard />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sequencer" element={<MainSequencer />}></Route>
+        <Route path="/piano" element={<PianoComponent />}></Route>
       </Routes>
     </div>
   );
