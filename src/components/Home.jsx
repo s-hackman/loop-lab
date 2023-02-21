@@ -22,7 +22,6 @@ const Home = () => {
       </button>
       {togglePiano ? <Keyboard /> : <PianoComponent />}
       <button onClick={() => handleClickPiano()}>
-        {" "}
         {!togglePiano ? "Show Keyboard" : "Show Piano"}
       </button>
     </div>
