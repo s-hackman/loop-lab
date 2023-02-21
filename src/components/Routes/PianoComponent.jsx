@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   playC4,
   playDb4,
@@ -14,10 +15,19 @@ import {
   playC5,
   playNote,
 } from "../pianoComponents/tone.fn";
-import "../pianoComponents/piano.css";
+import "../../styles/piano.css";
 
 export const PianoComponent = () => {
-  window.addEventListener("keydown", playNote);
+
+  useEffect(() => {
+    // attach the event listener
+    window.addEventListener("keydown", playNote);
+    // remove the event listener
+    return () => {
+      window.removeEventListener("keydown", playNote);
+    };
+  }, [playNote]);
+
 
   return (
     <div className="pianoContainer">
