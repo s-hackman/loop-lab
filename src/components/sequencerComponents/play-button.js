@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { darken } from "polished";
 
 const Button = styled.button`
   padding: 0.75em 2em;
@@ -12,8 +11,8 @@ const Button = styled.button`
   font-size: 1em;
   margin: 0.5em;
 
-  &:hover {
-    background: ${darken(0.2, "#27ae60")};
+  Button:hover {
+    background: "#39433e";
     cursor: pointer;
   }
 `;

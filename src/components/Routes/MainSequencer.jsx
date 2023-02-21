@@ -1,6 +1,6 @@
 import Sequencer from "../sequencerComponents/sequencer.js";
 import PlayerProvider from "../sequencerComponents/player-provider.js";
-
+import "../../styles/sequencer.css";
 const MainSequencer = () => {
   return (
     <PlayerProvider>

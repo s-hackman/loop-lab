@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Frame from "./frame";
 import Cell from "./cell";
 
 const Grid = ({ sequence, toggleStep }) => (
-  <Frame rows={4} columns={16}>
+  <div className="frame" rows={4} columns={16}>
     {sequence.map((line, i) =>
       line.map((time, j) => (
         <Cell
@@ -17,7 +16,7 @@ const Grid = ({ sequence, toggleStep }) => (
         />
       ))
     )}
-  </Frame>
+  </div>
 );
 
 export default Grid;

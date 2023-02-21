@@ -1,11 +1,9 @@
-import React from "react";
 import styled from "styled-components";
-import { darken } from "polished";
 
 const getBackground = (activated, triggered) => {
   switch (true) {
     case activated && triggered:
-      return darken(0.2, "#65daa2");
+      return "#39433e";
     case activated && !triggered:
       return "#65daa2";
     case !activated && triggered:
@@ -17,12 +15,12 @@ const getBackground = (activated, triggered) => {
 
 const Cell = styled.div.attrs(({ activated, triggered }) => ({
   style: {
-    background: getBackground(activated, triggered)
-  }
+    background: getBackground(activated, triggered),
+  },
 }))`
   border-radius: 4px;
-  grid-column: ${props => props.column};
-  grid-row: ${props => props.row};
+  grid-column: ${(props) => props.column};
+  grid-row: ${(props) => props.row};
   margin: 2px;
 `;
 
