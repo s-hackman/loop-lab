@@ -63,22 +63,3 @@ border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   
 }
-.nav{
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: #6259b4;
-  align-content: flex-end;
-  padding: 10px;
-  min-height: 50px;
-  max-height: 1000px;
-  font-size: 10px;
-  margin-bottom: 2%;
-  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(151, 116, 99), rgb(31, 29, 29));
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-}
-
-/* Home CSS */
-nav > a > img {
-  width: 30px;
-}
