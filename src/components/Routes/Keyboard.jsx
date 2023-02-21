@@ -3,7 +3,7 @@ import NumRow from "../keyboardRows/NumRow";
 import QRow from "../keyboardRows/QRow";
 import ARow from "../keyboardRows/ARow";
 import ZRow from "../keyboardRows/ZRow";
-import "../../styles/keyboard.css"
+import "../../styles/keyboard.css";
 
 const Keyboard = () => {
   return (

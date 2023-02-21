@@ -1,29 +1,40 @@
 .qrow {
-    display: flex;
-    margin-left: 4%;
+  display: flex;
+  margin-left: 4%;
 }
 
 .arow {
-    display: flex;
-    margin-left: 6.5%;
-
+  display: flex;
+  margin-left: 6.5%;
 }
 
 .zrow {
-    display: flex;
-    margin-left: 11.5%;
+  display: flex;
+  margin-left: 11.5%;
 }
 
 .keys {
-    background-color: cadetblue;
-    border: solid 1px black;
-    margin: 2px;
-    padding: 10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 10px;
+  background-color: cadetblue;
+  border: solid 1px black;
+  margin: 2px;
+  padding: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
 }
 
 .keys:active {
-    background-color: grey;
+  background-color: grey;
 }
+
+.keys:hover {
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px, -4px);
+  background: rgb(251, 193, 245);
+}
+
+.keys:focus {
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px, -4px);
+  background: rgb(251, 193, 245);
+}/*# sourceMappingURL=keyboard.css.map */

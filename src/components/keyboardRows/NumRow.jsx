@@ -55,6 +55,7 @@ const NumRow = () => {
     },
     [playbackRateBase]
   );
+
   useEffect(() => {
     // attach the event listener
     window.addEventListener("keydown", onKeyPress);

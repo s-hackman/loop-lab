@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import Keyboard from "./components/Routes/Keyboard";
 import Login from "./components/Routes/Login";
 import Navbar from "./components/Navbar";
