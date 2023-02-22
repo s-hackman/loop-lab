@@ -3,6 +3,7 @@ import Grid from "./grid";
 import * as Tone from "tone";
 import PlayerProvider from "./player-provider";
 import PlayButton from "./play-button";
+import PresetButton from "../presets/PresetButton";
 
 const steps = 16;
 const initialCellState = { triggered: false, activated: false };
@@ -75,6 +76,7 @@ const Sequencer = ({ player }) => {
       </div>
       <PlayButton playing={playing} onClick={() => setPlaying(!playing)} />
       <Grid sequence={sequence} toggleStep={toggleStep} />
+      <PresetButton sequence={sequence} setSequence={setSequence} />
     </>
   );
 };
