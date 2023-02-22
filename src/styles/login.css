@@ -1,0 +1,24 @@
+input {
+  display: block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  transition: transform 200ms, background 200ms;
+  background: rgb(240, 235, 235);
+  color: #000000;
+  box-shadow: 0 0 0 3px #000000 inset;
+}
+
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+  gap: 50px;
+  margin-top: 100px;
+}

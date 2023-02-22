@@ -14,7 +14,7 @@
 }
 
 .keys {
-  background-color: cadetblue;
+  background-color: rgb(144, 160, 95);
   border: solid 1px black;
   margin: 2px;
   padding: 10px;
@@ -25,4 +25,4 @@
 
 .keys:active {
   background-color: grey;
-}/*# sourceMappingURL=keyboard.css.map */
+}

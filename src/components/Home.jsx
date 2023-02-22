@@ -15,15 +15,19 @@ const Home = () => {
   };
 
   return (
-    <div>
-      {toggle && <MainSequencer />}
-      <button onClick={() => handleClick()}>
-        {!toggle ? "Show" : "Hide"} Sequencer
-      </button>
-      {togglePiano ? <Keyboard /> : <PianoComponent />}
-      <button onClick={() => handleClickPiano()}>
-        {!togglePiano ? "Show Keyboard" : "Show Piano"}
-      </button>
+    <div className="home_container">
+      <div>
+        {toggle && <MainSequencer />}
+        <button onClick={() => handleClick()}>
+          {!toggle ? "Show" : "Hide"} Sequencer
+        </button>
+      </div>
+      <div>
+        {togglePiano ? <Keyboard /> : <PianoComponent />}
+        <button onClick={() => handleClickPiano()}>
+          {!togglePiano ? "Show Keyboard" : "Show Piano"}
+        </button>
+      </div>
     </div>
   );
 };

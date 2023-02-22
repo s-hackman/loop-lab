@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../../firebase_setup/firebase";
 import UserContext from "../../context/userContext";
+import "../../styles/login.css";
 
 function Login() {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -61,7 +62,7 @@ function Login() {
   };
 
   return (
-    <div className="App">
+    <div className="Login">
       <div>
         <h3> Register User </h3>
         <input
@@ -76,7 +77,7 @@ function Login() {
             setRegisterPassword(event.target.value);
           }}
         />
-        {regMessage}
+        <div> {regMessage} </div>
         <button onClick={register}> Create User</button>
       </div>
 
@@ -94,7 +95,7 @@ function Login() {
             setLoginPassword(event.target.value);
           }}
         />
-        {loginMessage}
+        <div className=""> {loginMessage} </div>
         <button onClick={login}> Login</button>
       </div>
       {loginUser && (
