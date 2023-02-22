@@ -1,31 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { addDoc, getDocs, collection } from "@firebase/firestore";
 import { db } from "../../firebase_setup/firebase";
+import UserContext from "../../context/userContext";
 
 const PresetButton = ({ sequence, setSequence }) => {
+  const [selectOptions, setSelectOpitons] = useState([]);
+  const { loginUser } = useContext(UserContext);
   const importHandler = async () => {
-    await getDocs(collection(db, "user1")).then((querySnapshot) => {
+    await getDocs(collection(db, `${loginUser}`)).then((querySnapshot) => {
       const newData = querySnapshot.docs.map((doc) => ({
         ...doc.data(),
+        id: doc.id,
       }));
-      const newSequence = [
-        newData[newData.length - 1].testData.sequence0,
-        newData[newData.length - 1].testData.sequence1,
-        newData[newData.length - 1].testData.sequence2,
-        newData[newData.length - 1].testData.sequence3,
-      ];
-
-      setSequence(newSequence);
-      console.log(newData.length - 1);
+      setSelectOpitons(newData);
     });
   };
 
   useEffect(() => {
     importHandler();
-  }, []);
+  }, [selectOptions]);
 
   const submitHandler = () => {
-    const ref = collection(db, "user1"); // Firebase creates this automatically
+    const ref = collection(db, `${loginUser}`); // Firebase creates this automatically
     let data = {
       testData: {
         sequence0: sequence[0],
@@ -41,10 +37,35 @@ const PresetButton = ({ sequence, setSequence }) => {
     }
   };
 
+  const handleSelect = (e) => {
+    const newOption = selectOptions.filter((option) => {
+      return option.id === e.target.value;
+    });
+    const newSequence = [
+      newOption[0].testData.sequence0,
+      newOption[0].testData.sequence1,
+      newOption[0].testData.sequence2,
+      newOption[0].testData.sequence3,
+    ];
+    setSequence(newSequence);
+  };
+
   return (
     <>
       <button onClick={submitHandler}>Save</button>
-      <button onClick={importHandler}>Import Loop</button>
+
+      {selectOptions.length !== 0 && (
+        <>
+          <label>Change to your saved loops</label>
+          <select onChange={handleSelect}>
+            {selectOptions.map((loop) => (
+              <option key={loop.id} value={loop.id}>
+                {loop.id}
+              </option>
+            ))}
+          </select>
+        </>
+      )}
     </>
   );
 };

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Grid from "./grid";
 import * as Tone from "tone";
 import PlayerProvider from "./player-provider";
 import PlayButton from "./play-button";
 import PresetButton from "../presets/PresetButton";
+import UserContext from "../../context/userContext";
 
 const steps = 16;
 const initialCellState = { triggered: false, activated: false };
@@ -19,6 +20,8 @@ const Sequencer = ({ player }) => {
   const [sequence, setSequence] = useState(initialState);
   const [playing, setPlaying] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
+
+  const { loginUser } = useContext(UserContext);
 
   const toggleStep = (line, step) => {
     const sequenceCopy = [...sequence];
@@ -76,7 +79,9 @@ const Sequencer = ({ player }) => {
       </div>
       <PlayButton playing={playing} onClick={() => setPlaying(!playing)} />
       <Grid sequence={sequence} toggleStep={toggleStep} />
-      <PresetButton sequence={sequence} setSequence={setSequence} />
+      {loginUser && (
+        <PresetButton sequence={sequence} setSequence={setSequence} />
+      )}
     </>
   );
 };

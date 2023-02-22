@@ -95,7 +95,6 @@ function Login() {
         <>
           <h4> User Logged In: </h4>
           {loginUser}
-
           <button onClick={logout}> Sign Out </button>
         </>
       )}
