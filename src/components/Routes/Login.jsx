@@ -15,6 +15,8 @@ function Login() {
   const [loginPassword, setLoginPassword] = useState("");
   const { setLoginUser, loginUser } = useContext(UserContext);
   const [user, setUser] = useState({});
+  const [regMessage, setRegMessage] = useState("");
+  const [loginMessage, setLoginMessage] = useState("");
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -30,7 +32,9 @@ function Login() {
         registerPassword
       );
       console.log(user);
+      setRegMessage("");
     } catch (error) {
+      setRegMessage("invalid email address");
       console.log(error.message);
     }
   };
@@ -44,7 +48,9 @@ function Login() {
       );
       setLoginUser(user.user.email);
       console.log(loginUser);
+      setLoginMessage("");
     } catch (error) {
+      setLoginMessage("invalid user information");
       console.log(error.message);
     }
   };
@@ -70,7 +76,7 @@ function Login() {
             setRegisterPassword(event.target.value);
           }}
         />
-
+        {regMessage}
         <button onClick={register}> Create User</button>
       </div>
 
@@ -88,7 +94,7 @@ function Login() {
             setLoginPassword(event.target.value);
           }}
         />
-
+        {loginMessage}
         <button onClick={login}> Login</button>
       </div>
       {loginUser && (
