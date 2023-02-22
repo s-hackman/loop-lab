@@ -4,7 +4,7 @@ import { db } from "../../firebase_setup/firebase";
 
 const PresetButton = ({ sequence, setSequence }) => {
   const importHandler = async () => {
-    await getDocs(collection(db, "sequence")).then((querySnapshot) => {
+    await getDocs(collection(db, "user1")).then((querySnapshot) => {
       const newData = querySnapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
@@ -25,7 +25,7 @@ const PresetButton = ({ sequence, setSequence }) => {
   }, []);
 
   const submitHandler = () => {
-    const ref = collection(db, "sequence"); // Firebase creates this automatically
+    const ref = collection(db, "user1"); // Firebase creates this automatically
     let data = {
       testData: {
         sequence0: sequence[0],
