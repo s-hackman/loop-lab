@@ -10,7 +10,6 @@ import UserContext from "../context/userContext";
 
 const Navbar = () => {
   const { loginUser } = useContext(UserContext);
-  const { user } = useContext(UserContext);
   console.log(loginUser);
 
   return (

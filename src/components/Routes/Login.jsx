@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -6,13 +6,14 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../../firebase_setup/firebase";
+import UserContext from "../../context/userContext";
 
 function Login() {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-
+  const { setLoginUser, loginUser } = useContext(UserContext);
   const [user, setUser] = useState({});
 
   useEffect(() => {
@@ -41,13 +42,15 @@ function Login() {
         loginEmail,
         loginPassword
       );
-      console.log(user);
+      setLoginUser(user.user.email);
+      console.log(loginUser);
     } catch (error) {
       console.log(error.message);
     }
   };
 
   const logout = async () => {
+    setLoginUser(null);
     await signOut(auth);
   };
 
@@ -88,15 +91,14 @@ function Login() {
 
         <button onClick={login}> Login</button>
       </div>
-      {/* {user && (
+      {loginUser && (
         <>
           <h4> User Logged In: </h4>
-          {user?.email}
-          <h4> Last Logged In At: </h4>
-          {user?.metadata.lastSignInTime}
+          {loginUser}
+
           <button onClick={logout}> Sign Out </button>
         </>
-      )} */}
+      )}
     </div>
   );
 }
