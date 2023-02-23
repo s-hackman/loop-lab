@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <h2 className="logo">Loop Lab</h2>
+      <img src="/LoopLab.gif" alt="logo" />
       <div className="linkContainer">
         <Link to="/login">
           <img src={userSVG} alt="login" />
