@@ -35,19 +35,19 @@ const ZRow = () => {
   });
 
   const handleClickZRow = (key) => {
-    if (key === "z") {
+    if (key === "Z") {
       playZ();
-    } else if (key === "x") {
+    } else if (key === "X") {
       playX();
-    } else if (key === "c") {
+    } else if (key === "C") {
       playC();
-    } else if (key === "v") {
+    } else if (key === "V") {
       playV();
-    } else if (key === "b") {
+    } else if (key === "B") {
       playB();
-    } else if (key === "n") {
+    } else if (key === "N") {
       playN();
-    } else if (key === "m") {
+    } else if (key === "M") {
       playM();
     }
   };
@@ -79,64 +79,38 @@ const ZRow = () => {
   }, [onKeyPressZRow]);
 
   return (
-    <section className="zrow">
-      <div
-        className="keys"
-        onClick={(e) => {
-          handleClickZRow(e.target.innerText);
-        }}
-      >
-        z
+    <div className="keyboard-row">
+      <div className="key double-size lowercase lower-left">
+        <span className="lower-row-text"></span>
       </div>
-      <div
-        className="keys"
-        onClick={(e) => {
-          handleClickZRow(e.target.innerText);
-        }}
-      >
-        x
+      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+        Z
       </div>
-      <div
-        className="keys"
-        onClick={(e) => {
-          handleClickZRow(e.target.innerText);
-        }}
-      >
-        c
+      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+        X
       </div>
-      <div
-        className="keys"
-        onClick={(e) => {
-          handleClickZRow(e.target.innerText);
-        }}
-      >
-        v
+      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+        C
       </div>
-      <div
-        className="keys"
-        onClick={(e) => {
-          handleClickZRow(e.target.innerText);
-        }}
-      >
-        b
+      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+        V
       </div>
-      <div
-        className="keys"
-        onClick={(e) => {
-          handleClickZRow(e.target.innerText);
-        }}
-      >
-        n
+      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+        B
       </div>
-      <div
-        className="keys"
-        onClick={(e) => {
-          handleClickZRow(e.target.innerText);
-        }}
-      >
-        m
+      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+        N
       </div>
-    </section>
+      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+        M
+      </div>
+      <div className="key"></div>
+      <div className="key"></div>
+      <div className="key"></div>
+      <div className="key double-size lowercase lower-right">
+        <span className="lower-row-text"></span>
+      </div>
+    </div>
   );
 };
 

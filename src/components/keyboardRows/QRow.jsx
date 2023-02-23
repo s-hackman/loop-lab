@@ -63,38 +63,44 @@ const QRow = () => {
   }, [onKeyPress]);
 
   return (
-    <section className="qrow">
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        q
+    <div className="keyboard-row">
+      <div className="key extra-size lowercase lower-left">
+        <span className="lower-row-text"></span>
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        w
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        Q
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        e
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        W
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        r
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        E
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        t
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        R
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        y
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        T
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        u
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        Y
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        i
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        U
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        o
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        I
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        p
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        O
       </div>
-    </section>
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        P
+      </div>
+      <div className="key"></div>
+      <div className="key"></div>
+      <div className="key"></div>
+    </div>
   );
 };
 
