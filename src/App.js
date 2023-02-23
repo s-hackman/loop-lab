@@ -27,10 +27,10 @@ function App() {
       >
         <Navbar />
         <Routes>
-          {/* <Route path="/" element={<Home />}></Route> */}
+          <Route path="/" element={<Home />}></Route>
           <Route path="/keyboard" element={<Keyboard />}></Route>
           <Route path="/login" element={<Login />}></Route>
-          {/* <Route path="/sequencer" element={<MainSequencer />}></Route> */}
+          <Route path="/sequencer" element={<MainSequencer />}></Route>
           <Route path="/piano" element={<PianoComponent />}></Route>
         </Routes>
       </div>

@@ -8,20 +8,23 @@ body {
 }
 
 .keyboard-info {
-  display: flex;
+  display: grid;
   justify-content: center;
-  margin: 0 auto;
+  margin: 10px auto;
   align-items: center;
   background: rgba(255, 255, 255, 0.438);
   height: 100px;
-  width: 70%;
+  width: fit-content;
   border-radius: 20px;
+  padding: 0px 10px;
+
+  
 }
 
 .container {
   max-width: 816px;
   padding: 30px 8px 8px;
-  margin: 60px auto;
+  margin: 20px auto;
   box-shadow: inset 1px 1px 0px #f1f1f1, 3px 3px 6px 3px #303038;
   background-color: #e3e3e3;
   border-radius: 1px 1px 7px 7px;

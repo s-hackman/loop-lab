@@ -10,8 +10,8 @@ const Keyboard = () => {
     <>
       <section className="keyboard-info">
       <h1>Keyboard Sampler</h1>
-      <p>Click or type to make beats!</p>
       </section>
+      <p>Click or type to make beats!</p>
       <div className="container">
         <div>
           <NumRow />

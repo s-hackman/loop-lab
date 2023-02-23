@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import Grid from "./grid";
-import * as Tone from "tone";
-import PlayerProvider from "./player-provider";
 import PlayButton from "./play-button";
 import PresetButton from "../presets/PresetButton";
 import UserContext from "../../context/userContext";
@@ -24,7 +22,7 @@ const initialState = [
 const Sequencer = ({ player }) => {
   const [kit, setKit] = useState(lineMap[0]);
   const [sequence, setSequence] = useState(initialState);
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
 
   const { loginUser } = useContext(UserContext);
@@ -75,7 +73,7 @@ const Sequencer = ({ player }) => {
     <>
       <div className="bpm" style={{ padding: "20px" }}>
         BPM: {bpm}
-        <div className="bpm">
+        <div >
           <input
             name="bpm"
             type="range"

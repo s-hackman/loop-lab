@@ -1,3 +1,4 @@
+
 html {
   display: flex;
   background-image: "https://th.bing.com/th/id/R.8b3b943f0d3a2a5c3b35f7dc8e9959e2?rik=gR1xR%2fBFyu55HQ&pid=ImgRaw&r=0";
@@ -7,24 +8,6 @@ html {
   display: flex;
 }
 
-/* .homeButton {
-  max-height: 60px;
-  width: auto;
-  position: absolute;
- left: 50%;
-  min-height: 20px;
-  border-radius: 5px;
-  transition: all 0.15s ease-in-out;
-}
-.userButton{
-  max-height: 60px;
-  width: auto;
-  position: absolute;
- left: 25%;
-  min-height: 20px;
-  border-radius: 5px;
-  transition: all 0.15s ease-in-out; 
-} */
 #username {
   border: none;
   padding: 1px 32px;
@@ -39,27 +22,12 @@ html {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.customSlider {
-  /* max width of your slider */
-  max-width: 300px;
-  /* Optional: Only If you want to center your slider in the page */
-  margin: auto;
-}
 
-.customSlider-track {
-  /* Top value to align your track to the center of your thumb */
-  top: 8px;
-  /* thickness of the track */
-  height: 4px;
-  /* default color of your track */
-  background: var(--track-color);
+.test{
+  width: 816px;
+  height: 200px;
+  margin: 20px;
 }
-
-.customSlider-track.customSlider-track-0 {
-  /* color of the track before the thumb */
-  background: var(--main-color);
-}
-
 button {
   display: inline-block;
   outline: 0;
@@ -71,9 +39,11 @@ button {
   font-weight: 500;
   line-height: 1;
   transition: transform 200ms, background 200ms;
-  background: transparent;
-  color: #000000;
-  box-shadow: 0 0 0 3px #000000 inset;
+  background: #B71CBB;
+  color: #ffffff;
+  box-shadow: 0 0 0 0px #000000 inset;
+  margin: 10px;
+  
 }
 
 button:hover {
@@ -83,4 +53,6 @@ button:hover {
 .home_container {
   display: flex;
   flex-direction: row;
+  padding-left: 10%;
+  padding-right: 10%;
 }

@@ -29,7 +29,9 @@ export const PianoComponent = () => {
 
   return (
     <div className="pianoContainer">
+      <div className="pianoTitle">
       <h1>Piano</h1>
+      </div>
       <div className="piano">
         <div className="white-key" onClick={playC4}>
           A
