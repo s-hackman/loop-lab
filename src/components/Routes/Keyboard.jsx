@@ -8,6 +8,9 @@ import "../../styles/keyboard.css";
 const Keyboard = () => {
   return (
     <>
+      <h1>Keyboard Sampler</h1>
+      <p>Click or type to make beats!</p>
+      <section className="keyboard-info"></section>
       <div className="container">
         <div>
           <NumRow />

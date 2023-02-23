@@ -8,7 +8,12 @@ import UserContext from "../../context/userContext";
 
 const steps = 16;
 const initialCellState = { triggered: false, activated: false };
-const lineMap = ["BD", "CP", "CH", "OH"];
+const lineMap = [
+  ["BD", "CP", "CH", "OH"],
+  ["BD1", "CP1", "CH1", "OH1"],
+  ["BD2", "CP2", "CH2", "OH2"],
+  ["BD3", "CP3", "CH3", "OH3"],
+];
 const initialState = [
   new Array(16).fill(initialCellState),
   new Array(16).fill(initialCellState),
@@ -17,6 +22,7 @@ const initialState = [
 ];
 
 const Sequencer = ({ player }) => {
+  const [kit, setKit] = useState(lineMap[0]);
   const [sequence, setSequence] = useState(initialState);
   const [playing, setPlaying] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
@@ -36,7 +42,7 @@ const Sequencer = ({ player }) => {
         const { triggered, activated } = sequence[i][j];
         sequence[i][j] = { activated, triggered: j === time };
         if (triggered && activated) {
-          player.get(lineMap[i]).start();
+          player.get(kit[i]).start();
         }
       }
     }
@@ -61,13 +67,17 @@ const Sequencer = ({ player }) => {
   const inputChange = (e) => {
     setBpm(e.target.value);
   };
+
+  const handleSelect = (key) => {
+    setKit(lineMap[key]);
+  };
   return (
     <>
       <div className="bpm" style={{ padding: "20px" }}>
         BPM: {bpm}
-        <div className="gain-control">
+        <div className="bpm">
           <input
-            name="gainValue"
+            name="bpm"
             type="range"
             min="50"
             max="240"
@@ -78,6 +88,12 @@ const Sequencer = ({ player }) => {
         </div>
       </div>
       <PlayButton playing={playing} onClick={() => setPlaying(!playing)} />
+      <select name="set-Kit" onChange={(e) => handleSelect(e.target.value)}>
+        <option value="0">Kit One</option>
+        <option value="1">Kit Two</option>
+        <option value="2">Kit Three</option>
+        <option value="3">Kit Four</option>
+      </select>
       <Grid sequence={sequence} toggleStep={toggleStep} />
       {loginUser && (
         <PresetButton sequence={sequence} setSequence={setSequence} />
