@@ -8,15 +8,43 @@ import "../../styles/keyboard.css";
 const Keyboard = () => {
   return (
     <>
-      <section className="keyboard">
-        <NumRow />
-        <br></br>
-        <QRow />
-        <br></br>
-        <ARow />
-        <br></br>
-        <ZRow />
-      </section>
+      <div className="container">
+        <div>
+          <NumRow />
+          <QRow />
+          <ARow />
+          <ZRow />
+          <div className="keyboard-row bottom-row">
+            <div className="key lower-left lowercase">
+              <span className="lower-row-text"></span>
+            </div>
+            <div className="key lower-left lowercase">
+              <span className="lower-row-text"></span>
+            </div>
+            <div className="key lower-left lowercase">
+              <span className="lower-row-text"></span>
+            </div>
+            <div className="key lower-center lowercase extra-size-two">
+              <span className="lower-row-text"></span>
+            </div>
+            <div className="key space-bar"></div>
+            <div className="key lower-center lowercase extra-size-two">
+              <span className="lower-row-text"></span>
+            </div>
+            <div className="key lower-right lowercase">
+              <span className="lower-row-text"></span>
+            </div>
+            <div className="arrows">
+              <div className="key">&#9668;</div>
+              <div className="up-down">
+                <div className="key">&#9650;</div>
+                <div className="key">&#9660;</div>
+              </div>
+              <div className="key">&#9658;</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

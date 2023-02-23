@@ -60,35 +60,43 @@ const ARow = () => {
   }, [onKeyPress]);
 
   return (
-    <section className="arow">
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        a
+    <div className="keyboard-row">
+      <div className="key lowercase lower-left extra-size-two">
+        <span className="lower-row-text"></span>
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        s
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        A
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        d
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        S
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        f
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        D
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        g
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        F
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        h
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        G
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        j
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        H
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        k
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        J
       </div>
-      <div className="keys" onClick={(e) => handleClick(e.target.innerText)}>
-        l
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        K
       </div>
-    </section>
+      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+        L
+      </div>
+      <div className="key"></div>
+      <div className="key"></div>
+      <div className="key extra-size-two lowercase lower-right">
+        <span className="lower-row-text"></span>
+      </div>
+    </div>
   );
 };
 
