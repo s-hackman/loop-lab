@@ -58,15 +58,15 @@ const ZRow = () => {
     } else if (event.key === "x") {
       playX();
     } else if (event.key === "c") {
-      handleClickZRow(event.key);
+      playC();
     } else if (event.key === "v") {
-      handleClickZRow(event.key);
+      playV();
     } else if (event.key === "b") {
-      handleClickZRow(event.key);
+      playB();
     } else if (event.key === "n") {
-      handleClickZRow(event.key);
+      playN();
     } else if (event.key === "m") {
-      handleClickZRow(event.key);
+      playM();
     }
   });
   useEffect(() => {
@@ -83,25 +83,46 @@ const ZRow = () => {
       <div className="key double-size lowercase lower-left">
         <span className="lower-row-text"></span>
       </div>
-      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+      <div
+        className="key row_z"
+        onClick={(e) => handleClickZRow(e.target.innerText)}
+      >
         Z
       </div>
-      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+      <div
+        className="key row_x"
+        onClick={(e) => handleClickZRow(e.target.innerText)}
+      >
         X
       </div>
-      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+      <div
+        className="key row_c"
+        onClick={(e) => handleClickZRow(e.target.innerText)}
+      >
         C
       </div>
-      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+      <div
+        className="key row_v"
+        onClick={(e) => handleClickZRow(e.target.innerText)}
+      >
         V
       </div>
-      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+      <div
+        className="key row_b"
+        onClick={(e) => handleClickZRow(e.target.innerText)}
+      >
         B
       </div>
-      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+      <div
+        className="key row_n"
+        onClick={(e) => handleClickZRow(e.target.innerText)}
+      >
         N
       </div>
-      <div className="key" onClick={(e) => handleClickZRow(e.target.innerText)}>
+      <div
+        className="key row_m"
+        onClick={(e) => handleClickZRow(e.target.innerText)}
+      >
         M
       </div>
       <div className="key"></div>

@@ -7,11 +7,11 @@ body {
 }
 
 .keyboard-info {
-   display: flex;
+  display: flex;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
-  background: rgba(255, 255, 255, 0.438) ;
+  background: rgba(255, 255, 255, 0.438);
   height: 100px;
   width: 70%;
   border-radius: 20px;
@@ -197,4 +197,107 @@ body {
 }
 .num-row0 {
   background-color: #a43db7;
+}
+
+.row_q {
+  background-color: #e0d6f2;
+}
+
+.row_w {
+  background-color: #c1ade5;
+}
+
+.row_e {
+  background-color: #a384d8;
+}
+
+.row_r {
+  background-color: #845bcb;
+}
+
+.row_t {
+  background-color: #8756dc;
+}
+
+.row_y {
+  background-color: #7c50c9;
+}
+
+.row_u {
+  background-color: #7855b6;
+}
+
+.row_i {
+  background-color: #805ebb;
+}
+
+.row_o {
+  background-color: #7f5fb6;
+}
+
+.row_p {
+  background-color: #714fac;
+}
+
+.row_a {
+  background-color: rgb(255, 255, 209);
+}
+
+.row_s {
+  background-color: rgb(255, 255, 180);
+}
+
+.row_d {
+  background-color: rgb(255, 242, 153);
+}
+
+.row_f {
+  background-color: rgb(255, 213, 126);
+}
+
+.row_g {
+  background-color: rgb(255, 185, 99);
+}
+.row_h {
+  background-color: rgb(255, 157, 73);
+}
+
+.row_j {
+  background-color: rgb(250, 130, 46);
+}
+
+.row_k {
+  background-color: rgb(218, 104, 15);
+}
+
+.row_l {
+  background-color: rgb(244, 109, 6);
+}
+
+.row_z {
+  background-color: #c2f3f9;
+}
+
+.row_x {
+  background-color: #abf2fb;
+}
+
+.row_c {
+  background-color: #89f1ff;
+}
+
+.row_v {
+  background-color: #4eeaff;
+}
+
+.row_b {
+  background-color: #12e3ff;
+}
+
+.row_n {
+  background-color: #00b4cc;
+}
+
+.row_m {
+  background-color: #0090a3;
 }

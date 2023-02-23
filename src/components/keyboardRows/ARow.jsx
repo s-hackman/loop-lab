@@ -64,31 +64,58 @@ const ARow = () => {
       <div className="key lowercase lower-left extra-size-two">
         <span className="lower-row-text"></span>
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_a"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         A
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_s"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         S
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_d"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         D
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_f"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         F
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_g"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         G
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_h"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         H
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_j"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         J
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_k"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         K
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_l"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         L
       </div>
       <div className="key"></div>

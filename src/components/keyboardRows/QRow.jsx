@@ -67,34 +67,64 @@ const QRow = () => {
       <div className="key extra-size lowercase lower-left">
         <span className="lower-row-text"></span>
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_q"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         Q
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_w"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         W
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_e"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         E
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_r"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         R
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_t"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         T
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_y"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         Y
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_u"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         U
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_i"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         I
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_o"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         O
       </div>
-      <div className="key" onClick={(e) => handleClick(e.target.innerText)}>
+      <div
+        className="key row_p"
+        onClick={(e) => handleClick(e.target.innerText)}
+      >
         P
       </div>
       <div className="key"></div>
