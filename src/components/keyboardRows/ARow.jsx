@@ -65,55 +65,55 @@ const ARow = () => {
         <span className="lower-row-text"></span>
       </div>
       <div
-        className="key row_a"
+        className="key activeKey row_a"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         A
       </div>
       <div
-        className="key row_s"
+        className="key activeKey row_s"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         S
       </div>
       <div
-        className="key row_d"
+        className="key activeKey row_d"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         D
       </div>
       <div
-        className="key row_f"
+        className="key activeKey row_f"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         F
       </div>
       <div
-        className="key row_g"
+        className="key activeKey row_g"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         G
       </div>
       <div
-        className="key row_h"
+        className="key activeKey row_h"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         H
       </div>
       <div
-        className="key row_j"
+        className="key activeKey row_j"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         J
       </div>
       <div
-        className="key row_k"
+        className=" key activeKey row_k"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         K
       </div>
       <div
-        className="key row_l"
+        className=" key activeKey row_l"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         L

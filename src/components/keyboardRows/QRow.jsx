@@ -68,61 +68,61 @@ const QRow = () => {
         <span className="lower-row-text"></span>
       </div>
       <div
-        className="key row_q"
+        className=" key activeKey row_q"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         Q
       </div>
       <div
-        className="key row_w"
+        className=" key activeKey row_w"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         W
       </div>
       <div
-        className="key row_e"
+        className=" key activeKey row_e"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         E
       </div>
       <div
-        className="key row_r"
+        className=" key activeKey row_r"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         R
       </div>
       <div
-        className="key row_t"
+        className=" key activeKey row_t"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         T
       </div>
       <div
-        className="key row_y"
+        className=" key activeKey row_y"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         Y
       </div>
       <div
-        className="key row_u"
+        className=" key activeKey row_u"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         U
       </div>
       <div
-        className="key row_i"
+        className=" key activeKey row_i"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         I
       </div>
       <div
-        className="key row_o"
+        className=" key activeKey row_o"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         O
       </div>
       <div
-        className="key row_p"
+        className=" key activeKey row_p"
         onClick={(e) => handleClick(e.target.innerText)}
       >
         P

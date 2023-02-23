@@ -69,66 +69,66 @@ const NumRow = () => {
     <div className="keyboard-row">
       <div className="key"></div>
       <div
-        className="key num-row1"
+        className=" key activeKey num-row1"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         1
       </div>
       <div
-        className="key num-row2"
+        className=" key activeKey num-row2"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         2
       </div>
       <div
-        className="key num-row3"
+        className=" key activeKey num-row3"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         3
       </div>
       <div
-        className="key num-row4"
+        className=" key activeKey num-row4"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         4
       </div>
       <div
-        className="key num-row5"
+        className=" key activeKey num-row5"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         5
       </div>
       <div
-        className="key num-row6"
+        className=" key activeKey num-row6"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         6
       </div>
       <div
-        className="key num-row7"
+        className=" key activeKey num-row7"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         7
       </div>
       <div
-        className="key num-row8"
+        className=" key activeKey num-row8"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         8
       </div>
       <div
-        className="key num-row9"
+        className=" key activeKey num-row9"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         9
       </div>
       <div
-        className="key num-row0"
+        className=" key activeKey num-row0"
         onClick={(e) => handleClickBase(e.target.innerText)}
       >
         0
       </div>
-      <div className="key"></div>
+      <div className=" key "></div>
       <div className="key"></div>
       <div className="key extra-size lowercase lower-right">
         <span className="lower-row-text"></span>

@@ -84,43 +84,43 @@ const ZRow = () => {
         <span className="lower-row-text"></span>
       </div>
       <div
-        className="key row_z"
+        className="key activeKey row_z"
         onClick={(e) => handleClickZRow(e.target.innerText)}
       >
         Z
       </div>
       <div
-        className="key row_x"
+        className="key activeKey row_x"
         onClick={(e) => handleClickZRow(e.target.innerText)}
       >
         X
       </div>
       <div
-        className="key row_c"
+        className="key activeKey row_c"
         onClick={(e) => handleClickZRow(e.target.innerText)}
       >
         C
       </div>
       <div
-        className="key row_v"
+        className="key activeKey row_v"
         onClick={(e) => handleClickZRow(e.target.innerText)}
       >
         V
       </div>
       <div
-        className="key row_b"
+        className="key activeKey row_b"
         onClick={(e) => handleClickZRow(e.target.innerText)}
       >
         B
       </div>
       <div
-        className="key row_n"
+        className="key activeKey row_n"
         onClick={(e) => handleClickZRow(e.target.innerText)}
       >
         N
       </div>
       <div
-        className="key row_m"
+        className="key activeKey row_m"
         onClick={(e) => handleClickZRow(e.target.innerText)}
       >
         M

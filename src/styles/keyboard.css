@@ -1,6 +1,7 @@
 * {
   box-sizing: inherit;
 }
+
 body {
   box-sizing: border-box;
   background-color: #404049;
@@ -61,16 +62,20 @@ body {
   .key {
     height: 48px;
   }
+
   .keyboard-row.thin {
     height: 28px;
   }
+
   .keyboard-row.bottom-row {
     height: 55px;
   }
 }
 
-.key:hover {
-  background-color: #bdafaf;
+.activeKey:hover {
+  background-color: #b8b6b6;
+  scale: 0.9;
+  box-shadow: 4px 4px 0 #909090;
 }
 
 .key:active {
@@ -118,13 +123,16 @@ body {
 .lower-center {
   vertical-align: bottom;
 }
+
 .space-bar {
   flex: 7.2;
 }
+
 .lower-row-text {
   vertical-align: bottom;
   padding-bottom: 2px;
 }
+
 /* Bootom-row  */
 .bottom-row .arrows {
   display: flex;
@@ -133,6 +141,7 @@ body {
   align-items: flex-end;
   padding-bottom: 4px;
 }
+
 .up-down {
   flex: 1.2;
   height: 54px;
@@ -142,23 +151,23 @@ body {
   margin-right: 4px;
 }
 
-.up-down > .key {
+.up-down>.key {
   margin: 0;
 }
 
-.up-down > .key:first-child {
+.up-down>.key:first-child {
   box-shadow: inset 0 -5px 4px -4px #aaaaaa, inset 0px 1px 1px -1px #fff,
     0px 1px 1px 0px #7a7a7a;
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
 }
 
-.up-down > .key + .key {
+.up-down>.key+.key {
   border-top-left-radius: 1px;
   border-top-right-radius: 1px;
 }
 
-.bottom-row > .arrows > .key {
+.bottom-row>.arrows>.key {
   flex: 1;
   font-size: 7px;
   margin: 0 4px;
@@ -171,30 +180,39 @@ body {
 .num-row1 {
   background-color: #efcef4;
 }
+
 .num-row2 {
   background-color: #de9eea;
 }
+
 .num-row3 {
   background-color: #d88ce5;
 }
+
 .num-row4 {
   background-color: #cf81dd;
 }
+
 .num-row5 {
   background-color: #d075e0;
 }
+
 .num-row6 {
   background-color: #c974d8;
 }
+
 .num-row7 {
   background-color: #ce69e0;
 }
+
 .num-row8 {
   background-color: #c06ccf;
 }
+
 .num-row9 {
   background-color: #bf69cf;
 }
+
 .num-row0 {
   background-color: #a43db7;
 }
@@ -258,6 +276,7 @@ body {
 .row_g {
   background-color: rgb(255, 185, 99);
 }
+
 .row_h {
   background-color: rgb(255, 157, 73);
 }
