@@ -29,8 +29,8 @@ export const PianoComponent = () => {
 
   return (
     <div className="pianoContainer">
-      <div className="pianoTitle">
-      <h1>Piano</h1>
+      <div className="keyboard-info">
+      <img id="pianotitle" src="/8bitpiano.png" alt="keyboardtitle"></img>
       </div>
       <div className="piano">
         <div className="white-key" onClick={playC4}>

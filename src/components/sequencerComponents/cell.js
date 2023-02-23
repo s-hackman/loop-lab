@@ -9,7 +9,7 @@ const getBackground = (activated, triggered) => {
     case !activated && triggered:
       return "#eef";
     default:
-      return "#f9f9f9";
+      return "#e3e3e3";
   }
 };
 
@@ -18,7 +18,7 @@ const Cell = styled.div.attrs(({ activated, triggered }) => ({
     background: getBackground(activated, triggered),
   },
 }))`
-  border-radius: 4px;
+  border-radius: 3px;
   grid-column: ${(props) => props.column};
   grid-row: ${(props) => props.row};
   margin: 2px;

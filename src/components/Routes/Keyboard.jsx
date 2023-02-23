@@ -9,9 +9,9 @@ const Keyboard = () => {
   return (
     <>
       <section className="keyboard-info">
-      <h1>Keyboard Sampler</h1>
+      <img id="keytitle"src="/Keyboardsampler.png" alt="keyboardtitle"></img>
       </section>
-      <p>Click or type to make beats!</p>
+
       <div className="container">
         <div>
           <NumRow />

@@ -8,6 +8,7 @@ const MainSequencer = () => {
         if (!player) {
           return <p>loading....</p>;
         }
+    
         return <Sequencer player={player} />;
       }}
     </PlayerProvider>

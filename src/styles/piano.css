@@ -5,17 +5,10 @@
   height: 550px;
 }
 
-.pianoTitle {
-  text-align: center;
-  display: grid;
-  justify-content: center;
-  margin: 10px auto;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.438);
-  height: 100px;
-  width: fit-content;
-  border-radius: 20px;
-  padding: 0px 10px;
+#pianotitle {
+  margin-left: 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .piano {
@@ -26,7 +19,7 @@
 
 .white-key {
   margin-top: 80px;
-  border: 0.px solid #000000;
+  border: 0px solid #000000;
   width: 90px;
   height: 325px;
   background-color: rgb(247, 242, 242);

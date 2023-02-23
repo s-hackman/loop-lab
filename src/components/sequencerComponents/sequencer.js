@@ -71,6 +71,21 @@ const Sequencer = ({ player }) => {
   };
   return (
     <>
+
+
+    <section className="drumcontainer">
+        <img id="drumtitle" className="keyboard-info"src="/drumsequencer.png" alt="keyboardtitle"></img>
+      <Grid sequence={sequence} toggleStep={toggleStep} />
+      {loginUser && (
+        <PresetButton sequence={sequence} setSequence={setSequence} />
+        )}
+      <PlayButton playing={playing} onClick={() => setPlaying(!playing)} />
+      <select name="set-Kit" onChange={(e) => handleSelect(e.target.value)}>
+        <option value="0">Kit One</option>
+        <option value="1">Kit Two</option>
+        <option value="2">Kit Three</option>
+        <option value="3">Kit Four</option>
+      </select>
       <div className="bpm" style={{ padding: "20px" }}>
         BPM: {bpm}
         <div >
@@ -82,20 +97,10 @@ const Sequencer = ({ player }) => {
             value={bpm}
             onChange={inputChange}
             step="1"
-          />
+            />
         </div>
       </div>
-      <PlayButton playing={playing} onClick={() => setPlaying(!playing)} />
-      <select name="set-Kit" onChange={(e) => handleSelect(e.target.value)}>
-        <option value="0">Kit One</option>
-        <option value="1">Kit Two</option>
-        <option value="2">Kit Three</option>
-        <option value="3">Kit Four</option>
-      </select>
-      <Grid sequence={sequence} toggleStep={toggleStep} />
-      {loginUser && (
-        <PresetButton sequence={sequence} setSequence={setSequence} />
-      )}
+            </section>
     </>
   );
 };
