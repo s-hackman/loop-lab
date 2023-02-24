@@ -2,7 +2,10 @@ nav {
   display: flex;
   background-color: rgb(255, 255, 255);
   justify-content: space-between;
-  width: 99vw;
+  width: 100vw;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
 }
 
 .logo {
@@ -18,4 +21,9 @@ nav {
 /* Home CSS */
 nav > div > a > img {
   width: 30px;
+}
+
+.navbar-image {
+  margin-top: 14px;
+  /* margin-right: 10px; */
 }
