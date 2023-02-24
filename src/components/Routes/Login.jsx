@@ -102,7 +102,6 @@ function Login() {
         <input
           value={registerPassword}
           placeholder="Password..."
-          value={registerPassword}
           type='password'
           onChange={(event) => {
             setRegisterPassword(event.target.value);
@@ -118,7 +117,6 @@ function Login() {
         <input
           value={loginEmail}
           placeholder="Email..."
-          value={loginEmail}
           onChange={(event) => {
             setLoginEmail(event.target.value);
           }}
@@ -126,7 +124,6 @@ function Login() {
         <input
           value={loginPassword}
           placeholder="Password..."
-          value={loginPassword}
           type='password'
           onChange={(event) => {
             setLoginPassword(event.target.value);
