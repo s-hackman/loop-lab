@@ -7,8 +7,11 @@
 
 #pianotitle {
   margin-left: 30px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
+  ;
 }
 
 .piano {
@@ -56,11 +59,13 @@
     width: 40px;
     height: 220px;
   }
+
   .white-key {
     width: 80px;
     height: 350px;
   }
 }
+
 /* 
 @media only screen and (max-width: 1200px) {
   .black-key {
