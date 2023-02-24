@@ -4,7 +4,7 @@
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(4, 1fr);
   width: 640px;
-  height: 317px;
+  height: 300px;
 }
 
 .bpm {
@@ -30,4 +30,10 @@
 
 .bpm-slider {
   display: inline;
+}
+
+.options {
+  height: 38px;
+  background-color: white;
+  font-weight: bold;
 }

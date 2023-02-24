@@ -21,13 +21,17 @@ h3 {
 
 .Login {
   display: flex;
+
   justify-content: center;
   align-items: center;
   padding-left: 50px;
   gap: 50px;
-  margin-top: 100px;
+  /* margin-top: 100px;
+  margin-left: 500px; */
+  margin: 100px 400px;
+  background-color: rgba(137, 43, 226, 0.624);
+  border-radius: 20px;
 }
-
 
 .invalidInfo {
   color: rgb(248, 245, 245);

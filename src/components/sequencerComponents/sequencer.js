@@ -79,7 +79,7 @@ const Sequencer = ({ player }) => {
           alt="keyboardtitle"
         ></img>
         <div className="bpm">
-          BPM: <strong>{bpm}</strong>
+          <strong> BPM: {bpm}</strong>
           <input
             className="bpm-slider"
             name="bpm"
@@ -92,16 +92,22 @@ const Sequencer = ({ player }) => {
           />
         </div>
         <Grid sequence={sequence} toggleStep={toggleStep} />
-        {loginUser && (
-          <PresetButton sequence={sequence} setSequence={setSequence} />
-        )}
-        <select name="set-Kit" onChange={(e) => handleSelect(e.target.value)}>
-          <option value="0">Kit One</option>
-          <option value="1">Kit Two</option>
-          <option value="2">Kit Three</option>
-          <option value="3">Kit Four</option>
-        </select>
-        <PlayButton playing={playing} onClick={() => setPlaying(!playing)} />
+        <div>
+          {loginUser && (
+            <PresetButton sequence={sequence} setSequence={setSequence} />
+          )}
+          <select
+            className="options"
+            name="set-Kit"
+            onChange={(e) => handleSelect(e.target.value)}
+          >
+            <option value="0">Techno</option>
+            <option value="1">Retro</option>
+            <option value="2">Pop</option>
+            <option value="3">Drum & Base</option>
+          </select>
+          <PlayButton playing={playing} onClick={() => setPlaying(!playing)} />
+        </div>
       </section>
     </>
   );

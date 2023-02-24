@@ -4,11 +4,7 @@ import Keyboard from "./Routes/Keyboard";
 import { PianoComponent } from "./Routes/PianoComponent";
 
 const Home = () => {
-  const [toggle, setToggle] = useState(false);
   const [togglePiano, setTogglePiano] = useState(false);
-  const handleClick = () => {
-    setToggle(!toggle);
-  };
 
   const handleClickPiano = () => {
     setTogglePiano(!togglePiano);
@@ -19,13 +15,10 @@ const Home = () => {
       <div className="home-gap">
         {togglePiano ? <PianoComponent /> : <Keyboard />}
         <button onClick={() => handleClickPiano()}>
-          {!togglePiano ? "Show Piano" : "Show Keyboard"}
-        </button>
-        <button onClick={() => handleClick()}>
-          {!toggle ? "Show" : "Hide"} Sequencer
+          {!togglePiano ? "Change to Piano" : "Change to Keyboard"}
         </button>
       </div>
-      <div>{toggle && <MainSequencer />}</div>
+      <MainSequencer />
     </div>
   );
 };

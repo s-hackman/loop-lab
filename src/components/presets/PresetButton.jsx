@@ -6,15 +6,18 @@ import UserContext from "../../context/userContext";
 const PresetButton = ({ sequence, setSequence }) => {
   const [selectOptions, setSelectOpitons] = useState([]);
   const { loginUser } = useContext(UserContext);
-  const importHandler = async () => {
-    await getDocs(collection(db, `${loginUser}`)).then((querySnapshot) => {
-      const newData = querySnapshot.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
-      setSelectOpitons(newData);
-    });
-  };
+  // const importHandler = async () => {
+  //   await getDocs(collection(db, `${loginUser}`)).then((querySnapshot) => {
+  //     const newData = querySnapshot.docs.map((doc) => ({
+  //       ...doc.data(),
+  //       id: doc.id,
+  //     }));
+  //     setSelectOpitons(newData);
+  //   });
+  // };
+
+  //fake importHandler to stop Quota exceding for firebase
+  const importHandler = () => {};
 
   useEffect(() => {
     importHandler();
