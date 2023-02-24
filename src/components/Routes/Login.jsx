@@ -8,6 +8,7 @@ import {
 import { auth } from "../../firebase_setup/firebase";
 import UserContext from "../../context/userContext";
 import "../../styles/login.css";
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -18,6 +19,14 @@ function Login() {
   const [user, setUser] = useState({});
   const [regMessage, setRegMessage] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
+  const [regClassName, setRegClassName] = useState('');
+  const [loginClassName, setLoginClassName] = useState('');
+  const [passwordRegMessage, setPasswordRegMessage] = useState('');
+  const [passwordRegClassName, setPasswordRegClassName] = useState('');
+  const [passwordLoginMessage, setPasswordLoginMessage] = useState('');
+  const [passwordLoginClassName, setPasswordLoginClassName] = useState('');
+
+  let navigate = useNavigate();
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -32,12 +41,20 @@ function Login() {
         registerEmail,
         registerPassword
       );
-      console.log(user);
       setRegMessage("");
-      setRegisterEmail("");
-      setRegisterPassword("");
+      setRegisterPassword('');
+      setRegisterEmail('');
+      setRegMessage("your account has been created");
+      setLoginUser(user.user.email);
+      navigate("/");
     } catch (error) {
-      setRegMessage("invalid email address");
+      if (error.code === 'auth/weak-password') {
+        setPasswordRegMessage('Password should be at least 6 characters')
+        setPasswordRegClassName('invalidInfo')
+      } else {
+        setRegMessage("invalid email address");
+        setRegClassName('invalidInfo');
+      }
       console.log(error.message);
     }
   };
@@ -50,12 +67,18 @@ function Login() {
         loginPassword
       );
       setLoginUser(user.user.email);
-      console.log(loginUser);
       setLoginMessage("");
-      setLoginEmail("");
-      setLoginPassword("");
+      setLoginEmail('');
+      setLoginMessage('');
+      navigate("/");
     } catch (error) {
-      setLoginMessage("invalid user information");
+      if (error.code === 'auth/wrong-password') {
+        setPasswordLoginMessage('wrong password')
+        setPasswordLoginClassName('invalidInfo')
+      } else {
+        setLoginMessage("invalid user information");
+        setLoginClassName('invalidInfo');
+      }
       console.log(error.message);
     }
   };
@@ -79,11 +102,14 @@ function Login() {
         <input
           value={registerPassword}
           placeholder="Password..."
+          value={registerPassword}
+          type='password'
           onChange={(event) => {
             setRegisterPassword(event.target.value);
           }}
         />
-        <div> {regMessage} </div>
+        <div className={passwordRegClassName}>{passwordRegMessage}</div>
+        <div className={regClassName}> {regMessage} </div>
         <button onClick={register}> Create User</button>
       </div>
 
@@ -92,6 +118,7 @@ function Login() {
         <input
           value={loginEmail}
           placeholder="Email..."
+          value={loginEmail}
           onChange={(event) => {
             setLoginEmail(event.target.value);
           }}
@@ -99,11 +126,14 @@ function Login() {
         <input
           value={loginPassword}
           placeholder="Password..."
+          value={loginPassword}
+          type='password'
           onChange={(event) => {
             setLoginPassword(event.target.value);
           }}
         />
-        <div className=""> {loginMessage} </div>
+        <div className={passwordLoginClassName}>{passwordLoginMessage}</div>
+        <div className={loginClassName}> {loginMessage} </div>
         <button onClick={login}> Login</button>
       </div>
       {loginUser && (
