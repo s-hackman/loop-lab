@@ -4,11 +4,11 @@ import { useEffect, useCallback } from "react";
 
 const ZRow = () => {
   const tableSound = {
-    z: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Fairhorn.mp3?alt=media&token=79b431c9-ae99-4cbc-9b84-fc2306bbfd27",
-    x: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Fallthehits.mp3?alt=media&token=2cef3295-477a-486c-a0c1-8fb57626a8c7",
-    c: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Faweyeah.mp3?alt=media&token=2fb28322-7454-48a6-8065-b3e61da0a4b7",
-    v: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Fcongratulations.mp3?alt=media&token=45b5dc7a-349b-4d79-b417-e312aff23ac0",
-    b: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Fcops.mp3?alt=media&token=209d0f2b-ed34-40b4-a332-0d92da7585fd",
+    z: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FHouse%20SFX%2003.wav?alt=media&token=9d3b2e91-4b1e-455f-800b-88c667a233d8",
+    x: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FHouse%20SFX%2004.wav?alt=media&token=0d612072-58da-491c-bc5d-cf6e7e9881f2",
+    c: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FHouse%20SFX%2006.wav?alt=media&token=3402bcc5-7889-47ab-88a2-5e4dce7c5587",
+    v: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FHouse%20SFX%2011.wav?alt=media&token=e7a216a2-0383-4322-b265-3fa8dd93ded4",
+    b: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FPanned%20Reverse%20Cymbl.wav?alt=media&token=d6121908-d2b4-4229-b789-796b82081507",
     n: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Fdamnson.mp3?alt=media&token=efe63053-f327-4f83-937f-bfcf6255c646",
     m: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Felephant.mp3?alt=media&token=a37ecb2c-f027-4529-a5ae-1abf70bbc44a",
   };
