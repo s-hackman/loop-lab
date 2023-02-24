@@ -22,7 +22,7 @@ body {
   max-width: 816px;
   padding: 0px 8px 8px;
   margin-top: 50px;
-  /* margin: 50px auto; */
+  margin: 50px auto;
   box-shadow: inset 1px 1px 0px #f1f1f1, 3px 3px 6px 3px #303038;
   background-color: #e3e3e3;
   border-radius: 1px 1px 7px 7px;
