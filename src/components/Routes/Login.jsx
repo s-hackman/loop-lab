@@ -65,10 +65,11 @@ function Login() {
     <div className="Login">
       <div>
         <h3> Register User </h3>
-        <input
+        <input value={registerEmail}
           placeholder="Email..."
           onChange={(event) => {
             setRegisterEmail(event.target.value);
+            
           }}
         />
         <input
