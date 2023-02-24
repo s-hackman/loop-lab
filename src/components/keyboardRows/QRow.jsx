@@ -23,7 +23,7 @@ const QRow = () => {
     p: 1.6,
   };
   const handleClick = (key) => {
-    setPlaybackRate(table[key]);
+    setPlaybackRate(table[key.toLowerCase()]);
     play();
   };
 

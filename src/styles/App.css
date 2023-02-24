@@ -1,11 +1,6 @@
-
 html {
   display: flex;
   background-image: "https://th.bing.com/th/id/R.8b3b943f0d3a2a5c3b35f7dc8e9959e2?rik=gR1xR%2fBFyu55HQ&pid=ImgRaw&r=0";
-}
-
-.drums {
-  display: flex;
 }
 
 #username {
@@ -22,12 +17,12 @@ html {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-
-.test{
+.home-gap {
   width: 816px;
   height: 200px;
   margin-right: 20px;
 }
+
 button {
   display: inline-block;
   outline: 0;
@@ -39,11 +34,10 @@ button {
   font-weight: 500;
   line-height: 1;
   transition: transform 200ms, background 200ms;
-  background: #B71CBB;
+  background: #b71cbb;
   color: #ffffff;
   box-shadow: 0 0 0 0px #000000 inset;
   margin: 10px;
-  
 }
 
 button:hover {

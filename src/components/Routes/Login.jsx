@@ -92,14 +92,15 @@ function Login() {
     <div className="Login">
       <div>
         <h3> Register User </h3>
-        <input value={registerEmail}
+        <input
+          value={registerEmail}
           placeholder="Email..."
           onChange={(event) => {
             setRegisterEmail(event.target.value);
-
           }}
         />
         <input
+          value={registerPassword}
           placeholder="Password..."
           value={registerPassword}
           type='password'
@@ -115,6 +116,7 @@ function Login() {
       <div>
         <h3> Login </h3>
         <input
+          value={loginEmail}
           placeholder="Email..."
           value={loginEmail}
           onChange={(event) => {
@@ -122,6 +124,7 @@ function Login() {
           }}
         />
         <input
+          value={loginPassword}
           placeholder="Password..."
           value={loginPassword}
           type='password'

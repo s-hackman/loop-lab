@@ -16,18 +16,16 @@ const Home = () => {
 
   return (
     <div className="home_container">
-      <div className="test">
-        {togglePiano ? <PianoComponent/> : <Keyboard />}
+      <div className="home-gap">
+        {togglePiano ? <PianoComponent /> : <Keyboard />}
         <button onClick={() => handleClickPiano()}>
-          {!togglePiano ? "Show Piano": "Show Keyboard"}
+          {!togglePiano ? "Show Piano" : "Show Keyboard"}
         </button>
         <button onClick={() => handleClick()}>
           {!toggle ? "Show" : "Hide"} Sequencer
         </button>
       </div>
-      <div>
-        {toggle && <MainSequencer />}
-      </div>
+      <div>{toggle && <MainSequencer />}</div>
     </div>
   );
 };

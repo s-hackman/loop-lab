@@ -22,7 +22,7 @@ const ARow = () => {
     l: 2,
   };
   const handleClick = (key) => {
-    setPlaybackRate(table[key]);
+    setPlaybackRate(table[key.toLowerCase()]);
     play();
   };
 
