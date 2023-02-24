@@ -11,15 +11,15 @@ const ARow = () => {
     volume: 0.3,
   });
   const table = {
-    a: 0.4,
-    s: 0.6,
-    d: 0.8,
-    f: 1,
-    g: 1.2,
-    h: 1.4,
-    j: 1.6,
-    k: 1.8,
-    l: 2,
+    a: 0.491,
+    s: 0.552,
+    d: 0.621,
+    f: 0.658,
+    g: 0.741,
+    h: 0.829,
+    j: 0.932,
+    k: 0.987,
+    l: 1.105,
   };
   const handleClick = (key) => {
     setPlaybackRate(table[key.toLowerCase()]);

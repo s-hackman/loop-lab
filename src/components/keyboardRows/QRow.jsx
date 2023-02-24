@@ -11,16 +11,16 @@ const QRow = () => {
     volume: 0.3,
   });
   const table = {
-    q: 0.7,
-    w: 0.8,
-    e: 0.9,
-    r: 1,
-    t: 1.1,
-    y: 1.2,
-    u: 1.3,
-    i: 1.4,
-    o: 1.5,
-    p: 1.6,
+    q: 0.491,
+    w: 0.552,
+    e: 0.621,
+    r: 0.658,
+    t: 0.741,
+    y: 0.829,
+    u: 0.932,
+    i: 0.987,
+    o: 1.105,
+    p: 1.246,
   };
   const handleClick = (key) => {
     setPlaybackRate(table[key.toLowerCase()]);
