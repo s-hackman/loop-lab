@@ -34,6 +34,8 @@ function Login() {
       );
       console.log(user);
       setRegMessage("");
+      setRegisterEmail("");
+      setRegisterPassword("");
     } catch (error) {
       setRegMessage("invalid email address");
       console.log(error.message);
@@ -50,6 +52,8 @@ function Login() {
       setLoginUser(user.user.email);
       console.log(loginUser);
       setLoginMessage("");
+      setLoginEmail("");
+      setLoginPassword("");
     } catch (error) {
       setLoginMessage("invalid user information");
       console.log(error.message);
@@ -65,14 +69,15 @@ function Login() {
     <div className="Login">
       <div>
         <h3> Register User </h3>
-        <input value={registerEmail}
+        <input
+          value={registerEmail}
           placeholder="Email..."
           onChange={(event) => {
             setRegisterEmail(event.target.value);
-            
           }}
         />
         <input
+          value={registerPassword}
           placeholder="Password..."
           onChange={(event) => {
             setRegisterPassword(event.target.value);
@@ -85,12 +90,14 @@ function Login() {
       <div>
         <h3> Login </h3>
         <input
+          value={loginEmail}
           placeholder="Email..."
           onChange={(event) => {
             setLoginEmail(event.target.value);
           }}
         />
         <input
+          value={loginPassword}
           placeholder="Password..."
           onChange={(event) => {
             setLoginPassword(event.target.value);
