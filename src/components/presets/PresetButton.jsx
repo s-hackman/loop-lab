@@ -3,25 +3,22 @@ import { addDoc, getDocs, collection } from "@firebase/firestore";
 import { db } from "../../firebase_setup/firebase";
 import UserContext from "../../context/userContext";
 
-const PresetButton = ({ sequence, setSequence }) => {
+const PresetButton = ({ sequence, setSequence, setPlaying }) => {
   const [selectOptions, setSelectOpitons] = useState([]);
   const { loginUser } = useContext(UserContext);
-  // const importHandler = async () => {
-  //   await getDocs(collection(db, `${loginUser}`)).then((querySnapshot) => {
-  //     const newData = querySnapshot.docs.map((doc) => ({
-  //       ...doc.data(),
-  //       id: doc.id,
-  //     }));
-  //     setSelectOpitons(newData);
-  //   });
-  // };
-
-  //fake importHandler to stop Quota exceding for firebase
-  const importHandler = () => {};
+  const importHandler = async () => {
+    await getDocs(collection(db, `${loginUser}`)).then((querySnapshot) => {
+      const newData = querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setSelectOpitons(newData);
+    });
+  };
 
   useEffect(() => {
     importHandler();
-  }, [selectOptions]);
+  }, []);
 
   const submitHandler = () => {
     const ref = collection(db, `${loginUser}`); // Firebase creates this automatically
@@ -41,6 +38,7 @@ const PresetButton = ({ sequence, setSequence }) => {
   };
 
   const handleSelect = (e) => {
+    setPlaying(false);
     const newOption = selectOptions.filter((option) => {
       return option.id === e.target.value;
     });

@@ -94,7 +94,11 @@ const Sequencer = ({ player }) => {
         <Grid sequence={sequence} toggleStep={toggleStep} />
         <div>
           {loginUser && (
-            <PresetButton sequence={sequence} setSequence={setSequence} />
+            <PresetButton
+              sequence={sequence}
+              setSequence={setSequence}
+              setPlaying={setPlaying}
+            />
           )}
           <select
             className="options"
