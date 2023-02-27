@@ -15,12 +15,12 @@ nav {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.linkContainer > a {
+.linkContainer>a {
   margin: 0 20px;
 }
 
 /* Home CSS */
-nav > div > a > img {
+nav>div>a>img {
   width: 30px;
 }
 
@@ -30,23 +30,31 @@ nav > div > a > img {
   padding: 2px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   nav {
     font-size: 10px;
     display: flex;
     background-color: #f6f6f6;
     justify-content: space-between;
     width: 100vw;
+    margin-bottom: 30px;
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px,
       rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px,
       rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
-    margin-bottom: 10%;
+  }
+
+  .container {
+    max-width: 816px;
+    margin: 30px auto;
+    box-shadow: inset 1px 1px 0px #f1f1f1, 3px 3px 6px 3px #303038;
+    background-color: #e3e3e3;
+    border-radius: 1px 1px 7px 7px;
+    max-width: 0 auto;
   }
 
   .App {
     align-content: "center";
     width: "100vw";
-    height: "100vh";
   }
 
   .logo {
@@ -65,13 +73,42 @@ nav > div > a > img {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* margin: 200px 500px; */
     justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    gap: 380px;
+    gap: 320px;
     width: 500px;
     height: 250px;
-    margin-left: 200px;
+    margin: 0 auto;
+  }
+
+  .screen-message {
+    visibility: hidden;
+    margin: 0;
+  }
+}
+
+.screen-message {
+  visibility: hidden;
+  margin: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .screen-message {
+    visibility: visible;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+
+  }
+
+  .home_container {
+    visibility: hidden;
+  }
+
+  nav {
+    visibility: hidden;
+  }
+
+  .App {
+    visibility: hidden;
   }
 }

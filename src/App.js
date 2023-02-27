@@ -33,6 +33,7 @@ function App() {
           <Route path="/sequencer" element={<MainSequencer />}></Route>
           <Route path="/piano" element={<PianoComponent />}></Route>
         </Routes>
+        <h1 className="screen-message">This app only works on a larger screen</h1>
       </div>
     </UserContextProvider>
   );
