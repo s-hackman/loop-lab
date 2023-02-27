@@ -2,7 +2,7 @@
 
 This project was built using React, Tone and Firebase.
 
-A hosted version of this project can be found [here](http).
+A hosted version of this project can be found [here](https://looop-lab.netlify.app/).
 
 loop-lab is a website whereby a user can make beats and select different sounds samples. You can toggle between a keyboard and piano which register click or keypress to play together with a customisable sequencer. You can save and view your past beats for the sequencer when you log in and import them.
 

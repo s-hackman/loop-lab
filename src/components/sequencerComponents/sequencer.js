@@ -93,13 +93,6 @@ const Sequencer = ({ player }) => {
         </div>
         <Grid sequence={sequence} toggleStep={toggleStep} />
         <div>
-          {loginUser && (
-            <PresetButton
-              sequence={sequence}
-              setSequence={setSequence}
-              setPlaying={setPlaying}
-            />
-          )}
           <select
             className="options"
             name="set-Kit"
@@ -111,6 +104,13 @@ const Sequencer = ({ player }) => {
             <option value="3">Drum & Base</option>
           </select>
           <PlayButton playing={playing} onClick={() => setPlaying(!playing)} />
+          {loginUser && (
+            <PresetButton
+              sequence={sequence}
+              setSequence={setSequence}
+              setPlaying={setPlaying}
+            />
+          )}
         </div>
       </section>
     </>
