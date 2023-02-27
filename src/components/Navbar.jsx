@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img src="/LoopLab.gif" alt="logo" />
+      <img className="loop_logo" src="/LoopLab.gif" alt="logo" />
       <div className="linkContainer">
         <Link to="/login">
           <img src={userSVG} alt="login" className="navbar-image" />
