@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+## Background
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was built using React, Tone and Firebase.
 
-## Available Scripts
+A hosted version of this project can be found [here](http).
 
-In the project directory, you can run:
+loop-lab is a website whereby a user can make beats and select different sounds samples. You can toggle between a keyboard and piano which register click or keypress to play together with a customisable sequencer. You can save and view your past beats for the sequencer when you log in and import them.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project requires [npm](https://www.npmjs.com/get-npm) (v19.1.0 or newer) to run locally. Install if necessary.
 
-### `npm test`
+## Setting up your own local version
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone this repo:
 
-### `npm run build`
+```bash
+git clone https://github.com/${username}/loop-lab.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd loop-lab
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run the following commands in your terminal to install the project's dependencies and run it:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
 
-### `npm run eject`
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Step 2 - Setting up your recorder
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Recording Your Loops
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To record audio from our app you will need to install a dedicated recording software, this is a guide for ubuntu (windows users can follow this guide without installing anything, and here is a guide for mac users).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Firstly you need to install Audio Recorder
 
-## Learn More
+Open your terminal with:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+ctrl + alt + t
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Enter the following:
 
-### Code Splitting
+```bash
+sudo add-apt-repository ppa:audio-recorder/ppa
+sudo apt-get update && sudo apt-get install audio-recorder
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Using the settings change to your preferred format (FLAC or WAV for professional standard, MP3 if you're concerned about speed/size).
 
-### Analyzing the Bundle Size
+Select the route to date audio from the additional settings button at the bottom of the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Hit record.
 
-### Making a Progressive Web App
+Navigate to the folder you specified in the previous step and drag and drop your file into whichever DAW (digital audio workstation) you prefer, a couple of free ones below.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can record audio from [audacity](https://www.audacityteam.org/download/linux/) or [reaper](https://www.reaper.fm/download.php).
 
-### Advanced Configuration
+Once your audio has been dragged in you should be able to see it on screen, you can now trim it down to suit and use it to insert different loops and create your own music (pro tip: start with your drums and just keep adding until you're happy!).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
