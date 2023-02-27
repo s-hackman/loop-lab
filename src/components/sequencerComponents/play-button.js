@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  padding: 0.75em 2em;
+  padding: 0.75em 10em;
   outline: none;
-  background-color: #B71CBB;
+  background-color: #b71cbb;
   border: none;
   border-radius: 5px;
   color: white;
