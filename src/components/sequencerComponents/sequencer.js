@@ -92,7 +92,7 @@ const Sequencer = ({ player }) => {
           />
         </div>
         <Grid sequence={sequence} toggleStep={toggleStep} />
-        <div>
+        <div className="sequencerOptions">
           <select
             className="options"
             name="set-Kit"
@@ -109,8 +109,8 @@ const Sequencer = ({ player }) => {
               sequence={sequence}
               setSequence={setSequence}
               setPlaying={setPlaying}
-            />
-          )}
+            /> 
+            )}
         </div>
       </section>
     </>

@@ -92,36 +92,40 @@ const PresetButton = ({ sequence, setSequence, setPlaying }) => {
           </select>
         </>
       )}
-      <form onSubmit={submitHandler}>
+
+      <form className="savedelete" onSubmit={submitHandler}>
         <input
+        className="inputName"
           value={name}
           placeholder="Name Loop"
           type="text"
           name="name"
           onChange={handleInputChange}
-          style={{ display: "inline" }}
+
         ></input>
         <button>Save</button>
       </form>
       {selectOptions.length !== 0 && (
         <>
-          <select
-            className="options"
-            onChange={handleSelectDelete}
-            style={{ display: "inline" }}
-          >
-            <option selected disabled>
-              Delete loop
-            </option>
-            {selectOptions.map((loop) => (
-              <option key={loop.id} value={loop.id}>
-                {loop.name}
+          <div className="savedelete">
+            <select
+              className="options"
+              onChange={handleSelectDelete}
+              style={{ display: "inline" }}
+            >
+              <option selected disabled>
+                Delete loop
               </option>
-            ))}
-          </select>
+              {selectOptions.map((loop) => (
+                <option key={loop.id} value={loop.id}>
+                  {loop.name}
+                </option>
+              ))}
+            </select>
+      <button onClick={handleDelete}>Delete</button>
+      </div>
         </>
       )}
-      <button onClick={handleDelete}>Delete</button>
     </>
   );
 };

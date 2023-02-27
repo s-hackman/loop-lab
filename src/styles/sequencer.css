@@ -5,6 +5,13 @@
   grid-template-rows: repeat(4, 1fr);
   width: 640px;
   height: 300px;
+  justify-content: center;
+}
+
+.savedelete {
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 .bpm {
@@ -39,6 +46,17 @@
 .options {
   height: 38px;
   background-color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   display: inline;
+  border-radius: 8px;
+}
+.sequencerOptions{
+  margin: 0 auto;
+}
+
+.inputName{
+  width: 90px;
+  height: 40px;
+  display: "inline";
+  border-radius: 8px;
 }
