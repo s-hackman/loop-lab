@@ -10,7 +10,7 @@ const Row = ({ table, soundUrl }) => {
     volume: 0.3,
   });
 
-  const validKeys = Object.keys(table);
+  const validKeys = Object.keys(table).map(key => key.replace('_', ''));
 
   const handleClick = (key) => {
     setPlaybackRate(table[key.toLowerCase()]);
@@ -40,12 +40,11 @@ const Row = ({ table, soundUrl }) => {
     return (
       <div
         key={key}
-        className={`${
-          keyPressedStyle === key ? "keyPressed" : ""
-        } row_${key} key activeKey `}
+        className={`${keyPressedStyle === key ? "keyPressed" : ""
+          } row_${key} key activeKey `}
         onClick={(e) => handleClick(e.target.innerText)}
       >
-        {key.replace("_", "").toUpperCase()}
+        {key.toUpperCase()}
       </div>
     );
   });
