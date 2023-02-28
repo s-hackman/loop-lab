@@ -37,11 +37,12 @@ const Row = ({ table, soundUrl }) => {
     }, [onKeyPress]);
 
     return validKeys.map(key => {
+
         return <div key={key}
             className={`${keyPressedStyle === key ? 'keyPressed' : ''} row_${key} key activeKey `}
             onClick={(e) => handleClick(e.target.innerText)}
         >
-            {key.toUpperCase()}
+            {key.replace('_', '').toUpperCase()}
         </div>
     })
 };
