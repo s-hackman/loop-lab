@@ -1,5 +1,7 @@
 import * as Tone from "tone";
-export function playC4(chorus1, chorus2, chorus3) {
+export function playC4(
+  chorus1, chorus2, chorus3
+  ) {
   const chorus = new Tone.Chorus(chorus1, chorus2, chorus3).toMaster();
   const synth = new Tone.Synth().connect(chorus);
   synth.triggerAttackRelease("C4", "8n");
@@ -66,7 +68,7 @@ export function playC5(chorus1, chorus2, chorus3) {
 }
 export function playNote(event, chorus1, chorus2, chorus3) {
   if (event.keyCode === 65) {
-    playC4(chorus1, chorus2, chorus3);
+    playC4();
   }
   if (event.keyCode === 87) {
     playDb4(chorus1, chorus2, chorus3);

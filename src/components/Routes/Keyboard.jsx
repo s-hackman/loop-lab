@@ -9,7 +9,7 @@ const Keyboard = () => {
   const qRowSoundUrl =
     "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/stinger-sound-cmaj7-chord-stab-12534.mp3?alt=media&token=31278a3f-df90-4e2d-9020-b5be9e570f1b";
   const aRowSoundUrl =
-    "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2Fpiano-c_C_major.wav?alt=media&token=a0f8481e-c58f-4322-a822-705be76d285f";
+    "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/juno-106-synth-cream-pwm-synth_C_major.wav?alt=media&token=623d19ba-1281-4cf5-aac4-7545693586b4";
 
   const aRowTable = {
     a: 0.491,

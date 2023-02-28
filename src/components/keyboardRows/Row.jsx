@@ -10,15 +10,24 @@ const Row = ({ table, soundUrl }) => {
     volume: 0.3,
   });
 
-  const validKeys = Object.keys(table).map(key => key.replace('_', ''));
+  const validKeys = Object.keys(table).map((key) => key.replace("_", ""));
 
   const handleClick = (key) => {
-    setPlaybackRate(table[key.toLowerCase()]);
-    play();
-    setKeyPressedStyle(key);
-    setTimeout(() => {
-      setKeyPressedStyle("");
-    }, 400);
+    if (key.match(/\d/g)) {
+      setPlaybackRate(table["_" + key]);
+      play();
+      setKeyPressedStyle(key);
+      setTimeout(() => {
+        setKeyPressedStyle("");
+      }, 400);
+    } else {
+      setPlaybackRate(table[key.toLowerCase()]);
+      play();
+      setKeyPressedStyle(key);
+      setTimeout(() => {
+        setKeyPressedStyle("");
+      }, 400);
+    }
   };
 
   const onKeyPress = useCallback(
@@ -35,13 +44,13 @@ const Row = ({ table, soundUrl }) => {
       window.removeEventListener("keydown", onKeyPress);
     };
   }, [onKeyPress]);
-
   return validKeys.map((key) => {
     return (
       <div
         key={key}
-        className={`${keyPressedStyle === key ? "keyPressed" : ""
-          } row_${key} key activeKey `}
+        className={`${
+          keyPressedStyle === key ? "keyPressed" : ""
+        } row_${key} key activeKey `}
         onClick={(e) => handleClick(e.target.innerText)}
       >
         {key.toUpperCase()}

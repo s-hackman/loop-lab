@@ -19,9 +19,9 @@ import {
 import "../../styles/piano.css";
 import CircularSlider from "@fseehawer/react-circular-slider";
 export const PianoComponent = () => {
-  const [chorus1, setChorus1] = useState(0.9);
+  const [chorus1, setChorus1] = useState(1);
   const [chorus2, setChorus2] = useState(2.5);
-  const [chorus3, setChorus3] = useState(0.2);
+  const [chorus3, setChorus3] = useState(0.5);
   const inputChange1 = (value) => {
     setChorus1(value);
   };
@@ -152,99 +152,91 @@ export const PianoComponent = () => {
           K
         </div>
       </div>
-      <CircularSlider
-        width={50}
-        knobSize={20}
-        labelColor="#005A58"
-        knobColor="#005A58"
-        progressColorFrom="#00BFBD"
-        progressColorTo="#009C9A"
-        progressSize={10}
-        trackColor="#EEEEEE"
-        trackSize={20}
-        value={chorus1}
-        min={0}
-        max={11}
-        data={[
-          "0",
-          "0.1",
-          "0.2",
-          "0.3",
-          "0.4",
-          "0.5",
-          "0.6",
-          "0.7",
-          "0.8",
-          "0.9",
-          "1.0",
-          "1.1",
-        ]}
-        dataIndex={0}
-        hideLabelValue={true}
-        onChange={inputChange1}
-      />
-      <CircularSlider
-        width={50}
-        knobSize={20}
-        labelColor="#005A58"
-        knobColor="#005A58"
-        progressColorFrom="#00BFBD"
-        progressColorTo="#009C9A"
-        progressSize={10}
-        trackColor="#EEEEEE"
-        trackSize={20}
-        value={chorus1}
-        min={0}
-        max={11}
-        data={[
-          "0",
-          "0.1",
-          "0.2",
-          "0.3",
-          "0.4",
-          "0.5",
-          "0.6",
-          "0.7",
-          "0.8",
-          "0.9",
-          "1.0",
-          "1.1",
-        ]}
-        dataIndex={0}
-        hideLabelValue={true}
-        onChange={inputChange2}
-      />
-      <CircularSlider
-        width={50}
-        knobSize={20}
-        labelColor="#005A58"
-        knobColor="#005A58"
-        progressColorFrom="#00BFBD"
-        progressColorTo="#009C9A"
-        progressSize={10}
-        trackColor="#EEEEEE"
-        trackSize={20}
-        value={chorus1}
-        min={0}
-        max={11}
-        data={[
-          "0",
-          "0.1",
-          "0.2",
-          "0.3",
-          "0.4",
-          "0.5",
-          "0.6",
-          "0.7",
-          "0.8",
-          "0.9",
-          "1.0",
-          "1.1",
-        ]}
-        dataIndex={0}
-        hideLabelValue={true}
-        onChange={inputChange3}
-      />
+      <section className="sliders">
+        <CircularSlider
+          width={90}
+          knobSize={40}
+          labelColor="#005A58"
+          knobColor="#005A58"
+          progressColorFrom="#00BFBD"
+          progressColorTo="#009C9A"
+          progressSize={20}
+          trackColor="#EEEEEE"
+          trackSize={20}
+          value={chorus1}
+          min={0}
+          max={11}
+          data={["0", "0.5", "1", "1.5", "2", "2.5", "3", "3.5", "4"]}
+          dataIndex={0}
+          hideLabelValue={true}
+          onChange={inputChange1}
+        />
+        <CircularSlider
+          width={90}
+          knobSize={40}
+          labelColor="#005A58"
+          knobColor="#005A58"
+          progressColorFrom="#00BFBD"
+          progressColorTo="#009C9A"
+          progressSize={20}
+          trackColor="#EEEEEE"
+          trackSize={20}
+          value={chorus2}
+          min={0}
+          max={11}
+          data={[
+            "0",
+            "0.25",
+            "0.5",
+            "0.75",
+            "1",
+            "1.25",
+            "1.5",
+            "1.75",
+            "2",
+            "2.25",
+            "2.5",
+            "3",
+            "3.25",
+            "3.5",
+            "3.75",
+            "4",
+          ]}
+          dataIndex={0}
+          hideLabelValue={true}
+          onChange={inputChange2}
+        />
+        <CircularSlider
+          width={90}
+          knobSize={40}
+          labelColor="#005A58"
+          knobColor="#005A58"
+          progressColorFrom="#00BFBD"
+          progressColorTo="#009C9A"
+          progressSize={20}
+          trackColor="#EEEEEE"
+          trackSize={20}
+          value={chorus3}
+          min={0}
+          max={11}
+          data={[
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1",
+          ]}
+          dataIndex={0}
+          hideLabelValue={true}
+          onChange={inputChange3}
+        />
+      </section>
     </div>
   );
 };
