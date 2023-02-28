@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import * as Tone from "tone";
 import {
   playC4,
   playDb4,
@@ -16,63 +17,234 @@ import {
   playNote,
 } from "../pianoComponents/tone.fn";
 import "../../styles/piano.css";
-
+import CircularSlider from "@fseehawer/react-circular-slider";
 export const PianoComponent = () => {
+  const [chorus1, setChorus1] = useState(0.9);
+  const [chorus2, setChorus2] = useState(2.5);
+  const [chorus3, setChorus3] = useState(0.2);
+  const inputChange1 = (value) => {
+    setChorus1(value);
+  };
+  const inputChange2 = (value) => {
+    setChorus2(value);
+  };
+  const inputChange3 = (value) => {
+    setChorus3(value);
+  };
   useEffect(() => {
     // attach the event listener
-    window.addEventListener("keydown", playNote);
+    window.addEventListener("keydown", (event) => {
+      playNote(event, chorus1, chorus2, chorus3);
+    });
     // remove the event listener
     return () => {
       window.removeEventListener("keydown", playNote);
     };
   }, [playNote]);
-
   return (
     <div className="pianoContainer">
       <div className="keyboard-info">
-      <img id="pianotitle" src="/8bitpiano.png" alt="keyboardtitle"></img>
+        <img id="pianotitle" src="/8bitpiano.png" alt="keyboardtitle"></img>
       </div>
       <div className="piano">
-        <div className="white-key" onClick={playC4}>
+        <div
+          className="white-key"
+          onClick={() => {
+            playC4(chorus1, chorus2, chorus3);
+          }}
+        >
           A
         </div>
-        <div className="black-key" onClick={playDb4}>
+        <div
+          className="black-key"
+          onClick={() => {
+            playDb4(chorus1, chorus2, chorus3);
+          }}
+        >
           W
         </div>
-        <div className="white-key" onClick={playD4}>
+        <div
+          className="white-key"
+          onClick={() => {
+            playD4(chorus1, chorus2, chorus3);
+          }}
+        >
           S
         </div>
-        <div className="black-key" onClick={playEb4}>
+        <div
+          className="black-key"
+          onClick={() => {
+            playEb4(chorus1, chorus2, chorus3);
+          }}
+        >
           E
         </div>
-        <div className="white-key" onClick={playE4}>
+        <div
+          className="white-key"
+          onClick={() => {
+            playE4(chorus1, chorus2, chorus3);
+          }}
+        >
           D
         </div>
-        <div className="white-key" onClick={playF4}>
+        <div
+          className="white-key"
+          onClick={() => {
+            playF4(chorus1, chorus2, chorus3);
+          }}
+        >
           F
         </div>
-        <div className="black-key" onClick={playGb4}>
+        <div
+          className="black-key"
+          onClick={() => {
+            playGb4(chorus1, chorus2, chorus3);
+          }}
+        >
           T
         </div>
-        <div className="white-key" onClick={playG4}>
+        <div
+          className="white-key"
+          onClick={() => {
+            playG4(chorus1, chorus2, chorus3);
+          }}
+        >
           G
         </div>
-        <div className="black-key" onClick={playAb4}>
+        <div
+          className="black-key"
+          onClick={() => {
+            playAb4(chorus1, chorus2, chorus3);
+          }}
+        >
           Y
         </div>
-        <div className="white-key" onClick={playA4}>
+        <div
+          className="white-key"
+          onClick={() => {
+            playA4(chorus1, chorus2, chorus3);
+          }}
+        >
           H
         </div>
-        <div className="black-key" onClick={playBb4}>
+        <div
+          className="black-key"
+          onClick={() => {
+            playBb4(chorus1, chorus2, chorus3);
+          }}
+        >
           U
         </div>
-        <div className="white-key" onClick={playB4}>
+        <div
+          className="white-key"
+          onClick={() => {
+            playB4(chorus1, chorus2, chorus3);
+          }}
+        >
           J
         </div>
-        <div className="white-key" onClick={playC5}>
+        <div
+          className="white-key"
+          onClick={() => {
+            playC5(chorus1, chorus2, chorus3);
+          }}
+        >
           K
         </div>
       </div>
+      <CircularSlider
+        width={50}
+        knobSize={20}
+        labelColor="#005A58"
+        knobColor="#005A58"
+        progressColorFrom="#00BFBD"
+        progressColorTo="#009C9A"
+        progressSize={10}
+        trackColor="#EEEEEE"
+        trackSize={20}
+        value={chorus1}
+        min={0}
+        max={11}
+        data={[
+          "0",
+          "0.1",
+          "0.2",
+          "0.3",
+          "0.4",
+          "0.5",
+          "0.6",
+          "0.7",
+          "0.8",
+          "0.9",
+          "1.0",
+          "1.1",
+        ]}
+        dataIndex={0}
+        hideLabelValue={true}
+        onChange={inputChange1}
+      />
+      <CircularSlider
+        width={50}
+        knobSize={20}
+        labelColor="#005A58"
+        knobColor="#005A58"
+        progressColorFrom="#00BFBD"
+        progressColorTo="#009C9A"
+        progressSize={10}
+        trackColor="#EEEEEE"
+        trackSize={20}
+        value={chorus1}
+        min={0}
+        max={11}
+        data={[
+          "0",
+          "0.1",
+          "0.2",
+          "0.3",
+          "0.4",
+          "0.5",
+          "0.6",
+          "0.7",
+          "0.8",
+          "0.9",
+          "1.0",
+          "1.1",
+        ]}
+        dataIndex={0}
+        hideLabelValue={true}
+        onChange={inputChange2}
+      />
+      <CircularSlider
+        width={50}
+        knobSize={20}
+        labelColor="#005A58"
+        knobColor="#005A58"
+        progressColorFrom="#00BFBD"
+        progressColorTo="#009C9A"
+        progressSize={10}
+        trackColor="#EEEEEE"
+        trackSize={20}
+        value={chorus1}
+        min={0}
+        max={11}
+        data={[
+          "0",
+          "0.1",
+          "0.2",
+          "0.3",
+          "0.4",
+          "0.5",
+          "0.6",
+          "0.7",
+          "0.8",
+          "0.9",
+          "1.0",
+          "1.1",
+        ]}
+        dataIndex={0}
+        hideLabelValue={true}
+        onChange={inputChange3}
+      />
     </div>
   );
 };
