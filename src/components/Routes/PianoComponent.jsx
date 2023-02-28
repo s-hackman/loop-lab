@@ -31,16 +31,18 @@ export const PianoComponent = () => {
   const inputChange3 = (value) => {
     setChorus3(value);
   };
+
   useEffect(() => {
-    // attach the event listener
-    window.addEventListener("keydown", (event) => {
+   const choruses = (event) => {
       playNote(event, chorus1, chorus2, chorus3);
-    });
+    }
+    // attach the event listener
+    window.addEventListener("keydown", choruses);
     // remove the event listener
     return () => {
-      window.removeEventListener("keydown", playNote);
+      window.removeEventListener("keydown", choruses);
     };
-  }, [playNote]);
+  }, [playNote, chorus1, chorus2, chorus3]);
   return (
     <div className="pianoContainer">
       <div className="keyboard-info">
