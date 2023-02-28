@@ -1,8 +1,9 @@
 import React from "react";
 import useSound from "use-sound";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 
 const ZRow = () => {
+  const [keyPressedStyle, setKeyPressedStyle] = useState('');
   const tableSound = {
     z: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FHouse%20SFX%2003.wav?alt=media&token=9d3b2e91-4b1e-455f-800b-88c667a233d8",
     x: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FHouse%20SFX%2004.wav?alt=media&token=0d612072-58da-491c-bc5d-cf6e7e9881f2",
@@ -34,6 +35,8 @@ const ZRow = () => {
     volume: 0.5,
   });
 
+  const validKeys = Object.keys(tableSound);
+
   const handleClickZRow = (key) => {
     if (key === "Z") {
       playZ();
@@ -55,24 +58,51 @@ const ZRow = () => {
   const onKeyPressZRow = useCallback((event) => {
     if (event.key === "z") {
       playZ();
+      setKeyPressedStyle(event.key);
+      setTimeout(() => {
+        setKeyPressedStyle('')
+      }, 400)
     } else if (event.key === "x") {
       playX();
+      setKeyPressedStyle(event.key);
+      setTimeout(() => {
+        setKeyPressedStyle('')
+      }, 400)
     } else if (event.key === "c") {
       playC();
+      setKeyPressedStyle(event.key);
+      setTimeout(() => {
+        setKeyPressedStyle('')
+      }, 400)
     } else if (event.key === "v") {
       playV();
+      setKeyPressedStyle(event.key);
+      setTimeout(() => {
+        setKeyPressedStyle('')
+      }, 400)
     } else if (event.key === "b") {
       playB();
+      setKeyPressedStyle(event.key);
+      setTimeout(() => {
+        setKeyPressedStyle('')
+      }, 400)
     } else if (event.key === "n") {
       playN();
+      setKeyPressedStyle(event.key);
+      setTimeout(() => {
+        setKeyPressedStyle('')
+      }, 400)
     } else if (event.key === "m") {
       playM();
+      setKeyPressedStyle(event.key);
+      setTimeout(() => {
+        setKeyPressedStyle('')
+      }, 400)
     }
   });
+
   useEffect(() => {
-    // attach the event listener
     window.addEventListener("keydown", onKeyPressZRow);
-    // remove the event listener
     return () => {
       window.removeEventListener("keydown", onKeyPressZRow);
     };
@@ -83,48 +113,11 @@ const ZRow = () => {
       <div className="key double-size lowercase lower-left">
         <span className="lower-row-text"></span>
       </div>
-      <div
-        className="key activeKey row_z"
-        onClick={(e) => handleClickZRow(e.target.innerText)}
-      >
-        Z
-      </div>
-      <div
-        className="key activeKey row_x"
-        onClick={(e) => handleClickZRow(e.target.innerText)}
-      >
-        X
-      </div>
-      <div
-        className="key activeKey row_c"
-        onClick={(e) => handleClickZRow(e.target.innerText)}
-      >
-        C
-      </div>
-      <div
-        className="key activeKey row_v"
-        onClick={(e) => handleClickZRow(e.target.innerText)}
-      >
-        V
-      </div>
-      <div
-        className="key activeKey row_b"
-        onClick={(e) => handleClickZRow(e.target.innerText)}
-      >
-        B
-      </div>
-      <div
-        className="key activeKey row_n"
-        onClick={(e) => handleClickZRow(e.target.innerText)}
-      >
-        N
-      </div>
-      <div
-        className="key activeKey row_m"
-        onClick={(e) => handleClickZRow(e.target.innerText)}
-      >
-        M
-      </div>
+      {validKeys.map(key => {
+        return <div key={key} className={`${keyPressedStyle === key ? 'keyPressed' : ''} row_${key} key activeKey `} onClick={(e) => handleClickZRow(e.target.innerText)}>
+          {key}
+        </div>
+      })}
       <div className="key"></div>
       <div className="key"></div>
       <div className="key"></div>
