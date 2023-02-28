@@ -32,12 +32,14 @@
   border-radius: 7px;
 }
 
-.white-key:active {
-  background-color: gray;
+.white-key:active,
+.pianoPressed {
+  background-color: gray !important;
 }
 
-.black-key:active {
-  background-color: gray;
+.black-key:active,
+.pianoPressed {
+  background-color: gray !important;
 }
 
 .black-key {
@@ -53,12 +55,14 @@
   box-shadow: 0 10px 10px #555;
   border-radius: 2px;
 }
-.sliders{
+
+.sliders {
   display: flex;
   justify-content: center;
   margin: 10px;
 
 }
+
 @media only screen and (max-width: 850px) {
   .black-key {
     width: 40px;
@@ -70,9 +74,11 @@
     height: 350px;
   }
 }
-svg{
-  padding:5px
+
+svg {
+  padding: 5px
 }
+
 /* 
 @media only screen and (max-width: 1200px) {
   .black-key {
