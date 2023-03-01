@@ -17,7 +17,9 @@ import {
 } from "../pianoComponents/tone.fn";
 import "../../styles/piano.css";
 import CircularSlider from "@fseehawer/react-circular-slider";
+
 export const PianoComponent = () => {
+  const [keyPressedStyle, setKeyPressedStyle] = useState("");
   const [chorus1, setChorus1] = useState(1);
   const [chorus2, setChorus2] = useState(2.5);
   const [chorus3, setChorus3] = useState(0.5);
@@ -32,8 +34,12 @@ export const PianoComponent = () => {
   };
 
   useEffect(() => {
-   const choruses = (event) => {
+    const choruses = (event) => {
       playNote(event, chorus1, chorus2, chorus3);
+      setKeyPressedStyle(event.keyCode);
+      setTimeout(() => {
+        setKeyPressedStyle('')
+      }, 300)
     }
     // attach the event listener
     window.addEventListener("keydown", choruses);
@@ -49,7 +55,7 @@ export const PianoComponent = () => {
       </div>
       <div className="piano">
         <div
-          className="white-key"
+          className={`white-key ${keyPressedStyle === 65 ? 'pianoPressed' : ''} `}
           onClick={() => {
             playC4(chorus1, chorus2, chorus3);
           }}
@@ -57,7 +63,7 @@ export const PianoComponent = () => {
           A
         </div>
         <div
-          className="black-key"
+          className={`black-key ${keyPressedStyle === 87 ? 'pianoPressed' : ''}`}
           onClick={() => {
             playDb4(chorus1, chorus2, chorus3);
           }}
@@ -65,7 +71,7 @@ export const PianoComponent = () => {
           W
         </div>
         <div
-          className="white-key"
+          className={`white-key ${keyPressedStyle === 83 ? 'pianoPressed' : ''} `}
           onClick={() => {
             playD4(chorus1, chorus2, chorus3);
           }}
@@ -73,7 +79,7 @@ export const PianoComponent = () => {
           S
         </div>
         <div
-          className="black-key"
+          className={`black-key ${keyPressedStyle === 69 ? 'pianoPressed' : ''}`}
           onClick={() => {
             playEb4(chorus1, chorus2, chorus3);
           }}
@@ -81,7 +87,7 @@ export const PianoComponent = () => {
           E
         </div>
         <div
-          className="white-key"
+          className={`white-key ${keyPressedStyle === 68 ? 'pianoPressed' : ''} `}
           onClick={() => {
             playE4(chorus1, chorus2, chorus3);
           }}
@@ -89,7 +95,7 @@ export const PianoComponent = () => {
           D
         </div>
         <div
-          className="white-key"
+          className={`white-key ${keyPressedStyle === 70 ? 'pianoPressed' : ''} `}
           onClick={() => {
             playF4(chorus1, chorus2, chorus3);
           }}
@@ -97,7 +103,7 @@ export const PianoComponent = () => {
           F
         </div>
         <div
-          className="black-key"
+          className={`black-key ${keyPressedStyle === 84 ? 'pianoPressed' : ''}`}
           onClick={() => {
             playGb4(chorus1, chorus2, chorus3);
           }}
@@ -105,7 +111,7 @@ export const PianoComponent = () => {
           T
         </div>
         <div
-          className="white-key"
+          className={`white-key ${keyPressedStyle === 71 ? 'pianoPressed' : ''} `}
           onClick={() => {
             playG4(chorus1, chorus2, chorus3);
           }}
@@ -113,7 +119,7 @@ export const PianoComponent = () => {
           G
         </div>
         <div
-          className="black-key"
+          className={`black-key ${keyPressedStyle === 89 ? 'pianoPressed' : ''}`}
           onClick={() => {
             playAb4(chorus1, chorus2, chorus3);
           }}
@@ -121,7 +127,7 @@ export const PianoComponent = () => {
           Y
         </div>
         <div
-          className="white-key"
+          className={`white-key ${keyPressedStyle === 72 ? 'pianoPressed' : ''} `}
           onClick={() => {
             playA4(chorus1, chorus2, chorus3);
           }}
@@ -129,7 +135,7 @@ export const PianoComponent = () => {
           H
         </div>
         <div
-          className="black-key"
+          className={`black-key ${keyPressedStyle === 85 ? 'pianoPressed' : ''}`}
           onClick={() => {
             playBb4(chorus1, chorus2, chorus3);
           }}
@@ -137,7 +143,7 @@ export const PianoComponent = () => {
           U
         </div>
         <div
-          className="white-key"
+          className={`white-key ${keyPressedStyle === 74 ? 'pianoPressed' : ''} `}
           onClick={() => {
             playB4(chorus1, chorus2, chorus3);
           }}
@@ -145,7 +151,7 @@ export const PianoComponent = () => {
           J
         </div>
         <div
-          className="white-key"
+          className={`white-key ${keyPressedStyle === 75 ? 'pianoPressed' : ''} `}
           onClick={() => {
             playC5(chorus1, chorus2, chorus3);
           }}
