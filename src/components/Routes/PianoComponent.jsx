@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import * as Tone from "tone";
 import {
   playC4,
   playDb4,

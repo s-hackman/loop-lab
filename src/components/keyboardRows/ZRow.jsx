@@ -3,7 +3,7 @@ import useSound from "use-sound";
 import { useEffect, useCallback, useState } from "react";
 
 const ZRow = () => {
-  const [keyPressedStyle, setKeyPressedStyle] = useState('');
+  const [keyPressedStyle, setKeyPressedStyle] = useState("");
   const tableSound = {
     z: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FHouse%20SFX%2003.wav?alt=media&token=9d3b2e91-4b1e-455f-800b-88c667a233d8",
     x: "https://firebasestorage.googleapis.com/v0/b/fir-with-react-c4cc3.appspot.com/o/soundfx%2FHouse%20SFX%2004.wav?alt=media&token=0d612072-58da-491c-bc5d-cf6e7e9881f2",
@@ -60,44 +60,44 @@ const ZRow = () => {
       playZ();
       setKeyPressedStyle(event.key);
       setTimeout(() => {
-        setKeyPressedStyle('')
-      }, 400)
+        setKeyPressedStyle("");
+      }, 400);
     } else if (event.key === "x") {
       playX();
       setKeyPressedStyle(event.key);
       setTimeout(() => {
-        setKeyPressedStyle('')
-      }, 400)
+        setKeyPressedStyle("");
+      }, 400);
     } else if (event.key === "c") {
       playC();
       setKeyPressedStyle(event.key);
       setTimeout(() => {
-        setKeyPressedStyle('')
-      }, 400)
+        setKeyPressedStyle("");
+      }, 400);
     } else if (event.key === "v") {
       playV();
       setKeyPressedStyle(event.key);
       setTimeout(() => {
-        setKeyPressedStyle('')
-      }, 400)
+        setKeyPressedStyle("");
+      }, 400);
     } else if (event.key === "b") {
       playB();
       setKeyPressedStyle(event.key);
       setTimeout(() => {
-        setKeyPressedStyle('')
-      }, 400)
+        setKeyPressedStyle("");
+      }, 400);
     } else if (event.key === "n") {
       playN();
       setKeyPressedStyle(event.key);
       setTimeout(() => {
-        setKeyPressedStyle('')
-      }, 400)
+        setKeyPressedStyle("");
+      }, 400);
     } else if (event.key === "m") {
       playM();
       setKeyPressedStyle(event.key);
       setTimeout(() => {
-        setKeyPressedStyle('')
-      }, 400)
+        setKeyPressedStyle("");
+      }, 400);
     }
   });
 
@@ -113,10 +113,18 @@ const ZRow = () => {
       <div className="key double-size lowercase lower-left">
         <span className="lower-row-text"></span>
       </div>
-      {validKeys.map(key => {
-        return <div key={key} className={`${keyPressedStyle === key ? 'keyPressed' : ''} row_${key} key activeKey `} onClick={(e) => handleClickZRow(e.target.innerText)}>
-          {key}
-        </div>
+      {validKeys.map((key) => {
+        return (
+          <div
+            key={key}
+            className={`${
+              keyPressedStyle === key ? "keyPressed" : ""
+            } row_${key} key activeKey `}
+            onClick={(e) => handleClickZRow(e.target.innerText)}
+          >
+            {key}
+          </div>
+        );
       })}
       <div className="key"></div>
       <div className="key"></div>

@@ -7,7 +7,7 @@ const Row = ({ table, soundUrl }) => {
   const [playbackRate, setPlaybackRate] = useState(1);
   const [play] = useSound(soundUrl, {
     playbackRate,
-    volume: 0.3,
+    volume: 0.5,
   });
 
   const validKeys = Object.keys(table).map((key) => key.replace("_", ""));
